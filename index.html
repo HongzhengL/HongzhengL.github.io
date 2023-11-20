@@ -1,1 +1,23 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            // Function to handle redirection based on language
+            function redirectBasedOnLanguage() {
+                // Get the browser's default language
+                var userLang = navigator.language || navigator.userLanguage; 
+
+                // Redirect to English version if the first part of the language is 'en'
+                if (userLang.startsWith('en')) {
+                    window.location.href = 'index-en.html';
+                } else {
+                    // Otherwise redirect to the Chinese version
+                    window.location.href = 'index-zh.html';
+                }
+            }
+
+            // Call the redirection function as soon as the script loads
+            redirectBasedOnLanguage();
+        </script>
+    </head>
+</html>
