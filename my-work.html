@@ -20,11 +20,29 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-item nav-link" href="https://hongzhengli.com">WordPress</a>
-                        <a class="nav-item nav-link" href="index.html">About Me</a>
-                        <a class="nav-item nav-link" href="my-work.html">My Work</a>
-                    </div>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Social Links
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="https://www.linkedin.com/in/hongzheng-li-uwmadison">LinkedIn</a></li>
+                                <li><a class="dropdown-item" href="https://github.com/HongzhengL">GitHub</a></li>
+                                <li><a class="dropdown-item" href="https://git.hongzhengli.com">One Dev</a></li>
+                                <li><a class="dropdown-item" href="https://hongzhengli.com">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-work.html">My Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="course-review.html">Course Review</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -41,10 +59,10 @@
                         <li>Auto-tuning fast memory size to ensure minimal performance degradation</li>
                         <li><strong>Saving up to 16%</strong> fast top tier memory with an overhead of 5% performance loss</li>
                     </ul>
-                    <a href="tiers-memory.png" class="btn btn-outline-primary">Download the paper</a>
+                    <!-- <a href="tiers-memory.png" class="btn btn-outline-primary">Download the paper</a> -->
                 </div>
                 <div class="col-md-4">
-                    <img src="tiers-memory.png" alt="Diagram of Tierd Memory" class="img-fluid">
+                    <img src="assets/images/tiers-memory.png" alt="Diagram of Tierd Memory" class="img-fluid">
                 </div>
             </div>
 
@@ -56,37 +74,13 @@
                         <li>Enabled Double Delivery feature through Points of Interest, adapting to environmental changes.</li>
                         <li>Utilized Docker to ensure platform-friendly deployment without the need for environment setup.</li>
                     </ul>
+                    <a href="https://git.hongzhengli.com/Drone_Simulation" class="btn btn-outline-primary">Get Source Code</a>                    
                     <a href="https://github.com/HongzhengL/drone-simulation" class="btn btn-outline-primary">Deploy it now!</a>
                 </div>
                 <div class="col-md-4">
-                    <img src="Drone_Simulation_UI.png" alt="Drone Simulation UI" class="img-fluid">
+                    <img src="assets/images/Drone_Simulation_UI.png" alt="Drone Simulation UI" class="img-fluid">
                 </div>
             </div>
-
-
-            <h1><strong>Project Metrics</strong></h1>
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Project</th>
-                        <th>Language</th>
-                        <th>Tools</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Tuna Memory Management System</td>
-                        <td>C, C++, shell script</td>
-                        <td>AutoNUMA, TPP</td>
-                    </tr>
-                    <tr>
-                        <td>Drone Simulation</td>
-                        <td>C++</td>
-                        <td>Docker, Doxygen</td>
-                    </tr>
-                </tbody>
-            </table>
 
         </section>
 

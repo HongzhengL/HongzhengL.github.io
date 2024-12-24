@@ -1,0 +1,44 @@
+{
+    "courses": [
+        {
+            "course_code": "COMP SCI 272",
+            "image": "assets/images/comp_sci_272.jpg",
+            "semester": "Fall 2024",
+            "instructor": "Cole Nelson",
+            "hours": 40,
+            "review": "This was the inaugural offering of this course, and I was pleasantly surprised by its quality. It's an excellent course for beginners, yet even as someone with prior programming experience, I can still get something out of it. However, the amount of work is too little. I wish there were more assignments. If CS 472 had been available that semester, I would have taken that instead."
+        },
+        {
+            "course_code": "COMP SCI 400",
+            "image": "assets/images/comp_sci_400.jpg",
+            "semester": "Fall 2024",
+            "instructor": "Florian Heimerl",
+            "hours": 70,
+            "review": "As the third introductory course of Computer Science at UW Madison, it has done a decent job of covering a broad range of topics. However, the breadth of the material comes at the cost of depth. If you truly want to learn something, you might want to read the optional reading. Meanwhile, some of the topics are a little bit outdated. For example, it's quite weird that we are using Makefile for Java projects. I think it would be better if we use Maven or Gradle. Despite this, Professor Heimerl has done a great job in explaining the concepts. As long as you listen to the lecture, you should be fine."
+        },
+        {
+            "course_code": "RP & SE 100",
+            "image": "assets/images/rp_se_100.jpg",
+            "semester": "Fall 2024",
+            "instructor": "Yuewn-lann Yang & Jahyun Yoo",
+            "hours": 90,
+            "review": "I took this course online for satisfying Social Science Breadth. It seemed like an easy course because the average grade is relatively high. However, I think it might be a little bit challenging for slow readers. We generally have to read 2 chapters every week and do a discussion post and two replies based on the content we read that week. However, the content is quite interesting and I have learned and realized the biases that people with disabilities face in the society. I think it's a great course for people who are interested in disability studies."
+        },
+        {
+            "course_code": "BIOCHEM 104",
+            "image": "assets/images/biochem_104.jpg",
+            "semester": "Fall 2024",
+            "instructor": "Mario Pennella & Richard Amasino",
+            "hours": 20,
+            "review": "This is the most chilling course in my college life. I took the online version and the only thing we have is weekly quizzes and short answer assignments, which can be done in less than 1 hour if you took biology in high school. This is the original words from the instructor: \"We try to provide an interesting course that doesn't take up too much time outside of class so you can focus on your courses for your major as many of you are senior students.\" And they have done a great job in doing that. If you are looking for an easy course to knock out some Biological Sciences credits, this is the one."
+        },
+        {
+            "course_code": "SOC WORK 100",
+            "image": "assets/images/soc_work_100.jpg",
+            "semester": "Fall 2024",
+            "instructor": "Katarina Craig",
+            "hours": 40,
+            "review": "This course is only offered to first year (transfer) students. It's a great course for people who want to knock out some Social Science credits. As long as you can come to class for participation and answer all the prompts in the assignments, you will probably get an A."
+        }
+    ]
+}
