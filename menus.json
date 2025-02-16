@@ -1,0 +1,42 @@
+{
+    "menuItems": [
+        {
+            "type": "dropdown",
+            "text": "Social Links",
+            "items": [
+                {
+                    "text": "LinkedIn",
+                    "href": "https://www.linkedin.com/in/hongzheng-li-uwmadison"
+                },
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/HongzhengL"
+                },
+                {
+                    "text": "Personal Git Platform",
+                    "href": "https://git.hongzhengli.com"
+                }
+            ]
+        },
+        {
+            "type": "link",
+            "text": "Demo",
+            "href": "https://drone.hongzhengli.com/"
+        },
+        {
+            "type": "link",
+            "text": "About Me",
+            "href": "index.html"
+        },
+        {
+            "type": "link",
+            "text": "My Work",
+            "href": "my-work.html"
+        },
+        {
+            "type": "link",
+            "text": "Course Review",
+            "href": "course-review.html"
+        }
+    ]
+}

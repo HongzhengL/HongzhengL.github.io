@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>UW-Madison Course Review</title>
@@ -11,36 +12,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: skyblue; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+
+    <nav class="navbar navbar-expand-lg navbar-light"
+        style="background-color: skyblue; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="index.html">Hongzheng's Homepage</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="/">Hongzheng's Homepage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Social Links
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/hongzheng-li-uwmadison">LinkedIn</a></li>
-                            <li><a class="dropdown-item" href="https://github.com/HongzhengL">GitHub</a></li>
-                            <li><a class="dropdown-item" href="https://git.hongzhengli.com">One Dev</a></li>
-                            <li><a class="dropdown-item" href="https://blog.hongzhengli.com">Blog</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="my-work.html">My Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="course-review.html">Course Review</a>
-                    </li>
+                <ul class="navbar-nav ms-auto" id="dynamic-menu">
+                    <!-- Menu items will be dynamically inserted here -->
                 </ul>
             </div>
         </div>
@@ -57,10 +39,14 @@
     <footer class="bg-light text-dark py-3 position-sticky mt-auto">
         <p class="text-center">
             Thank you for visiting my website.<br>
-            Feel free to <a href="mailto:hongzheng@cs.wisc.edu" class="text-decoration-none text-primary fw-bold">contact me</a> with any questions or feedback.
+            Feel free to <a href="mailto:hongzheng@cs.wisc.edu"
+                class="text-decoration-none text-primary fw-bold">contact me</a> with any questions or feedback.
         </p>
     </footer>
 
+    <!-- Menu Script -->
+    <script src="menu.js"></script>
 
 </body>
+
 </html>
