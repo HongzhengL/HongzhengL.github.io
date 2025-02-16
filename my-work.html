@@ -43,6 +43,11 @@
                             <div class="row align-items-start project mb-4">
                                 <div class="col-md-8">
                                     <h2><em>${project.title}</em></h2>
+                                    <div class="mb-3">
+                                        ${project.technologies.map(tech => `
+                                            <span class="badge bg-secondary me-1">${tech}</span>
+                                        `).join('')}
+                                    </div>
                                     <ul>
                                         ${project.description.map(item => `<li>${item}</li>`).join('')}
                                     </ul>
