@@ -28,34 +28,39 @@
     </nav>
 
     <section class="container mt-5">
-
         <h1 class="mb-4"><strong>My Work</strong></h1>
-
-        <div class="row align-items-start project mb-4">
-            <div class="col-md-8">
-                <h2><em>Drone Simulation</em></h2>
-                <ul>
-                    <li>Implemented dynamic Battery Packs using the <strong>Decorator pattern</strong> for flexible
-                        enhancements.</li>
-                    <li>Enabled Double Delivery feature through Points of Interest, adapting to environmental changes.
-                    </li>
-                    <li>Utilized Docker to ensure platform-friendly deployment without the need for environment setup.
-                    </li>
-                </ul>
-                <a href="https://docs.hongzhengli.com/drone-simulation/classes.html"
-                    class="btn btn-outline-primary">Read Docs</a>
-                <a href="https://drone.hongzhengli.com" class="btn btn-outline-primary">Play with it</a>
-                <a href="https://git.hongzhengli.com/Drone_Simulation" class="btn btn-outline-primary">Get Source
-                    Code</a>
-                <a href="https://github.com/HongzhengL/drone-simulation" class="btn btn-outline-primary">Deploy it
-                    now!</a>
-            </div>
-            <div class="col-md-4">
-                <img src="assets/images/Drone_Simulation_UI.png" alt="Drone Simulation UI" class="img-fluid">
-            </div>
-        </div>
-
+        <div id="projects-container"></div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('my-work.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('projects-container');
+                    data.projects.forEach(project => {
+                        const projectHTML = `
+                            <div class="row align-items-start project mb-4">
+                                <div class="col-md-8">
+                                    <h2><em>${project.title}</em></h2>
+                                    <ul>
+                                        ${project.description.map(item => `<li>${item}</li>`).join('')}
+                                    </ul>
+                                    ${project.links.map(link => `
+                                        <a href="${link.url}" class="btn btn-outline-primary">${link.text}</a>
+                                    `).join('')}
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="${project.image}" alt="${project.title}" class="img-fluid">
+                                </div>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', projectHTML);
+                    });
+                })
+                .catch(error => console.error('Error loading projects:', error));
+        });
+    </script>
 
     <footer class="bg-light text-dark py-3 position-sticky mt-auto">
         <p class="text-center">

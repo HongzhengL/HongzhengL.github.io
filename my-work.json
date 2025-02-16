@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "title": "Drone Simulation",
+      "description": [
+        "Implemented dynamic Battery Packs using the Decorator pattern for flexible enhancements.",
+        "Enabled Double Delivery feature through Points of Interest, adapting to environmental changes.",
+        "Utilized Docker to ensure platform-friendly deployment without the need for environment setup."
+      ],
+      "links": [
+        {
+          "text": "Read Docs",
+          "url": "https://docs.hongzhengli.com/drone-simulation/classes.html"
+        },
+        {
+          "text": "Play with it",
+          "url": "https://drone.hongzhengli.com"
+        },
+        {
+          "text": "Get Source Code",
+          "url": "https://git.hongzhengli.com/Drone_Simulation"
+        },
+        {
+          "text": "Deploy it now!",
+          "url": "https://github.com/HongzhengL/drone-simulation"
+        }
+      ],
+      "image": "assets/images/Drone_Simulation_UI.png"
+    }
+  ]
+}
