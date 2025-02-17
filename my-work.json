@@ -1,32 +1,40 @@
 {
-  "projects": [
-    {
-      "title": "Drone Simulation",
-      "description": [
-        "Implemented dynamic Battery Packs using the Decorator pattern for flexible enhancements.",
-        "Enabled Double Delivery feature through Points of Interest, adapting to environmental changes.",
-        "Utilized Docker to ensure platform-friendly deployment without the need for environment setup."
-      ],
-      "technologies": ["C++", "TypeScript", "Docker", "Git"],
-      "links": [
+    "projects": [
         {
-          "text": "Read Docs",
-          "url": "https://docs.hongzhengli.com/drone-simulation/classes.html"
-        },
-        {
-          "text": "Play with it",
-          "url": "https://drone.hongzhengli.com"
-        },
-        {
-          "text": "Get Source Code",
-          "url": "https://git.hongzhengli.com/Drone_Simulation"
-        },
-        {
-          "text": "Deploy it now!",
-          "url": "https://github.com/HongzhengL/drone-simulation"
+            "title": "Drone Simulation",
+            "description": [
+                "Built a multi-entity simulator in C++ using Composite Factory",
+                "Extended functionality of entities using the Decorator pattern",
+                "Implemented the Observer pattern for real-time notifications, sending JSON events to TypeScript front end",
+                "Containerized the environment with Docker for uniform builds and deployments",
+                "Employed CI/CD pipelines to automate testing and deployment",
+                "Practiced Scrum and used Git for collaborative development and version control"
+            ],
+            "technologies": [
+                "C++",
+                "TypeScript",
+                "Docker",
+                "Git"
+            ],
+            "links": [
+                {
+                    "text": "Read Docs",
+                    "url": "https://docs.hongzhengli.com/drone-simulation/classes.html"
+                },
+                {
+                    "text": "Play with it",
+                    "url": "https://drone.hongzhengli.com"
+                },
+                {
+                    "text": "Get Source Code",
+                    "url": "https://git.hongzhengli.com/Drone_Simulation"
+                },
+                {
+                    "text": "Deploy it now!",
+                    "url": "https://github.com/HongzhengL/drone-simulation"
+                }
+            ],
+            "image": "assets/images/Drone_Simulation_UI.png"
         }
-      ],
-      "image": "assets/images/Drone_Simulation_UI.png"
-    }
-  ]
+    ]
 }
