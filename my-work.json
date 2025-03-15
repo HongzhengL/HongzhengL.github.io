@@ -14,6 +14,8 @@
                 "C++",
                 "TypeScript",
                 "Docker",
+                "Docker Compose",
+                "CI/CD",
                 "Git"
             ],
             "links": [
@@ -35,6 +37,29 @@
                 }
             ],
             "image": "assets/images/Drone_Simulation_UI.png"
+        },
+        {
+            "title": "Distributed Address Lookup System",
+            "description": [
+                "Built a multi-container application with gRPC and Flask for address lookups in Madison, WI",
+                "Implemented LRU caching and load-balanced gRPC requests for performance optimization",
+                "Used Docker and Docker Compose for consistent, containerized deployment",
+                "Added retry logic and server replication to handle failures gracefully"
+            ],
+            "technologies": [
+                "Python",
+                "gRPC",
+                "Flask",
+                "Docker",
+                "Docker Compose"
+            ],
+            "links": [
+                {
+                    "text": "Get Source Code",
+                    "url": "https://git.hongzhengli.com/CS544/proj-2/~files"
+                }
+            ],
+            "image": "assets/images/look_up_system.png"
         }
     ]
 }

@@ -19,9 +19,18 @@
             ]
         },
         {
-            "type": "link",
+            "type": "dropdown",
             "text": "Demo",
-            "href": "https://drone.hongzhengli.com/"
+            "items": [
+                {
+                    "text": "Drone Simulation",
+                    "href": "https://drone.hongzhengli.com"
+                },
+                {
+                    "text": "Badger Buddies",
+                    "href": "https://badger-buddies.hongzhengli.com"
+                }
+            ]
         },
         {
             "type": "link",
