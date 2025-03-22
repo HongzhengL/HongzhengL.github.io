@@ -3,11 +3,16 @@ jobs:
 - name: Deploy to Backup Machine
   steps:
   - !SSHCommandStep
-    name: Deploy
+    name: Pull & Deploy
     remoteMachine: 172.190.20.196
     userName: roymanclee
     privateKeySecret: private key
     commands: |
+      cd /home/roymanclee/hongzhengli.com
+
+      git fetch origin
+      git reset --hard origin/main
+
       sudo cp -r /home/roymanclee/hongzhengli.com/* /opt/1panel/apps/openresty/openresty/www/sites/hongzhengli.com/index/
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
