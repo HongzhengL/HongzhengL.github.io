@@ -28,7 +28,7 @@
                     "url": "https://drone.hongzhengli.com"
                 },
                 {
-                    "text": "Get Source Code",
+                    "text": "View Source Code",
                     "url": "https://git.hongzhengli.com/Drone_Simulation"
                 },
                 {
@@ -55,11 +55,34 @@
             ],
             "links": [
                 {
-                    "text": "Get Source Code",
+                    "text": "View Source Code",
                     "url": "https://git.hongzhengli.com/CS544/proj-2/~files"
                 }
             ],
             "image": "assets/images/look_up_system.png"
+        },
+        {
+            "title": "xv6 Transparent Huge Page Support",
+            "description": [
+                "Extended xv6 kernel to support 4MB huge page allocations via custom physical allocator (khugealloc, khugefree)",
+                "Developed user-level vmalloc/vfree supporting base or huge pages with robust error handling and input validation",
+                "Added transparent huge page support (THP) to malloc() using size-based heuristics (1MB threshold)",
+                "Created system calls (setthp, procpgdirinfo, printhugpde) for controlling and debugging THP allocation",
+                "Addressed edge cases like invalid remapping and page boundary overflows through iterative debugging",
+                "Managed development across multiple branches with CI configuration, merging, and cleanup"
+            ],
+            "technologies": [
+                "C",
+                "Git",
+                "CI/CD"
+            ],
+            "links": [
+                {
+                    "text": "View Source Code",
+                    "url": "https://github.com/HongzhengL/xv6-thp"
+                }
+            ],
+            "image": "assets/images/xv6-thp.png"
         }
     ]
 }
