@@ -83,6 +83,29 @@
                 }
             ],
             "image": "assets/images/xv6-thp.png"
+        },
+        {
+            "title": "MiniSpark - Distributed Data Processing Framework",
+            "description": [
+                "Developed a thread-based mini implementation of Apache Spark for parallel data processing on a single node",
+                "Built a Directed Acyclic Graph (DAG) model using Resilient Distributed Datasets (RDDs) to organize data processing tasks",
+                "Implemented common data transformations such as map, filter, join, and partitionBy with parallel execution across worker threads",
+                "Managed concurrent execution using a custom thread pool and synchronized task queue with condition variables",
+                "Utilized metrics logging to monitor task scheduling and execution performance in real-time",
+                "Optimized parallel computation of RDD partitions and DAG traversal to avoid deadlocks and efficiently utilize CPU cores"
+            ],
+            "technologies": [
+                "C",
+                "Git",
+                "CI/CD"
+            ],
+            "links": [
+                {
+                    "text": "View Project",
+                    "url": "https://git.hongzhengli.com/CS537-Intro-OS/25Spring-p5-miniSpark"
+                }
+            ],
+            "image": "assets/images/miniSpark.png"
         }
     ]
 }

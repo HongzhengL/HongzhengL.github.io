@@ -1,12 +1,74 @@
 {
     "courses": [
         {
+            "course_code": "CMU 15-445",
+            "image": "assets/images/bustub.svg",
+            "semester": "Summer 2025",
+            "hours": "N/A",
+            "review": [
+                "I'm still taking it..."
+            ]
+        },
+        {
+            "course_code": "COMP SCI 537",
+            "image": "assets/images/comp_sci_537.png",
+            "semester": "Spring 2025",
+            "instructor": "Michael Swift",
+            "hours": 130,
+            "review": [
+                "Before taking this course, I had very high expectations because I'd heard that it's extremely challenging. That turned out to be true—you're expected to read 2 to 4, or sometimes even 6, textbook chapters each week and fully digest the material. However, I have to admit I was a bit disappointed with the projects offered, at least for this spring. I was ready to spend days and nights working on them, but only two projects gave me some level of that engagement. That wasn't because the projects were too challenging, it was more because I had heavy commitments with my three other CS courses and had little time for that. I didn't end up with too much hands-on experience writing complex system calls or functions. Because of that, if there's a spot available in the graduate-level OS course next semester, I'm planning to take it to fill that gap.",
+                "Also, I don't really like the fact that some people have access to past exam papers while others don't. That creates an unfair advantage. To help address this, I'm sharing what I have [here](./assets/pdf/cs537_past_exam.pdf). If you can, please share it with your classmates to help level the playing field."
+            ]
+        },
+        {
+            "course_code": "COMP SCI 557",
+            "image": "assets/images/comp_sci_557.png",
+            "semester": "Spring 2025",
+            "instructor": "Eftychios Sifakis",
+            "hours": 55,
+            "review": [
+                "I think this is a must-take course for anyone who wants to write efficient code. We spent the first half of our class talking about how to optimize general matrix mulplication (GEMM) and the second half of the class talking about how to use the libraries for solving sparse matrix and dense matrix, then a little bit about convolution and a little bit about CUDA. However, it doesn't really dive deep into how to write CUDA or use libraries like MPI. It's more about the optimization of parallel rather about how to do things parallel. As a intermediate level course, it's not designed to be hard, and the workload is very managable. There're 5 assignments, and each of them are mostly about benchmarking and are not code extensive. In fact, if you follow the instructions, you're very likely to get full mark on the assignments. For the exams, I would say Prof. Sifakis likes to reuse the knowledge in the sample exams."
+            ]
+        },
+        {
+            "course_code": "COMP SCI 544",
+            "image": "assets/images/tar-meme.png",
+            "semester": "Spring 2025",
+            "instructor": "Tyler Caraza-harter",
+            "hours": 60,
+            "review": [
+                "This course teaches lots of useful tools. However, somehow I just can't remember how to use those tools and just have a basic understanding of them (like the `tar` command in the meme). I guess this isn't too bad because I can easily pick it up with documentation when I need to use those tools... I felt like this course is more DS focus and is for people coming from CS320 and not really for people coming from CS400 track, at least not for me. Even though I can take it using CS400 as requisites, I had a hard time writing the projects (which is usually 200-ish lines) because I need to spend a lot of time looking up the documentation. But it's not a hard course though, if you take it with Tyler. He likes to use past exam questions for quiz and the exams. He might change the way the questions is asked a little bit, but as long as you know the knowledge behind the questions, and put down all the Anki cards content to your cheat sheet. Here's a [cheat sheet](./assets/pdf/CS544_Final_Cheat_Sheet) that help me get a full score on the final."
+            ]
+        },
+        {
+            "course_code": "COMP SCI 571",
+            "image": "assets/images/comp_sci_571.png",
+            "semester": "Spring 2025",
+            "instructor": "Cole Nelson & Yaxin Hu",
+            "hours": 70,
+            "review": [
+                "There is not too much to say about this course. I took it simply because I want to satisfy the application requirement and graduate sooner. There is two time consuming, at least for me, projects after the conclusion of react and react native, respectively. Exam can be a little tricky, though. Tips for the course are:",
+                "- Do **NOT** use email alias until you receive the API they send to your email, otherwise you might be misjudging for copying code for your projects because you're **NOT** using initial net-id email address to make sufficient API calls",
+                "- You don't really need to go to the design lecture to succeed in the exam, all you need is a good cheat sheet. I used Gemini 2.5 Pro and Overleaf for my cheat sheet, and here's a [sample](./assets/pdf/CS571_Final_Cheat_Sheet.pdf) for you reference. Just remember to use the sample exams to help yourself to familiarize where the concepts are before the exam!"
+            ]
+        },
+        {
+            "course_code": "CURRIC 277",
+            "image": "assets/images/curric_277.png",
+            "semester": "Spring 2025",
+            "instructor": "Krista-lee Malone & Nathan Batty",
+            "hours": 30,
+            "review": [
+                "If the draft, which needs to be a nearly completed version of the final paper is not due in the midterm weeks, I would say this is the second chillest course that I've ever had in Madison. We were basically just playing video games, journal it and write a paper about it. Your TA would definitely affect your experience of this course. I was lucky to have Nathan as my TA and he did not enforce speaking during the discussion to get full participation grade. My advice is that for people that are nervous to speak in front of a large group of people like me, if you have the choice, take the online version!"
+            ]
+        },
+        {
             "course_code": "COMP SCI 272",
             "image": "assets/images/comp_sci_272.jpg",
             "semester": "Fall 2024",
             "instructor": "Cole Nelson",
             "hours": 40,
-            "review": "This was the inaugural offering of this course, and I was pleasantly surprised by its quality. It's an excellent course for beginners, yet even as someone with prior programming experience, I can still get something out of it. However, the amount of work is too little. I wish there were more assignments. If CS 472 had been available that semester, I would have taken that instead."
+            "review": ["This was the inaugural offering of this course, and I was pleasantly surprised by its quality. It's an excellent course for beginners, yet even as someone with prior programming experience, I can still get something out of it. However, the amount of work is too little. I wish there were more assignments. If CS 472 had been available that semester, I would have taken that instead."]
         },
         {
             "course_code": "COMP SCI 400",
@@ -14,7 +76,7 @@
             "semester": "Fall 2024",
             "instructor": "Florian Heimerl",
             "hours": 70,
-            "review": "As the third introductory course of Computer Science at UW Madison, it has done a decent job of covering a broad range of topics. However, the breadth of the material comes at the cost of depth. If you truly want to learn something, you might want to read the optional reading. Meanwhile, some of the topics are a little bit outdated. For example, it's quite weird that we are using Makefile for Java projects. I think it would be better if we use Maven or Gradle. Despite this, Professor Heimerl has done a great job in explaining the concepts. As long as you listen to the lecture, you should be fine."
+            "review": ["As the third introductory course of Computer Science at UW Madison, it has done a decent job of covering a broad range of topics. However, the breadth of the material comes at the cost of depth. If you truly want to learn something, you might want to read the optional reading. Meanwhile, some of the topics are a little bit outdated. For example, it's quite weird that we are using Makefile for Java projects. I think it would be better if we use Maven or Gradle. Despite this, Professor Heimerl has done a great job in explaining the concepts. As long as you listen to the lecture, you should be fine."]
         },
         {
             "course_code": "RP & SE 100",
@@ -22,7 +84,7 @@
             "semester": "Fall 2024",
             "instructor": "Yuewn-lann Yang & Jahyun Yoo",
             "hours": 90,
-            "review": "I took this course online for satisfying Social Science Breadth. It seemed like an easy course because the average grade is relatively high. However, I think it might be a little bit challenging for slow readers. We generally have to read 2 chapters every week and do a discussion post and two replies based on the content we read that week. However, the content is quite interesting and I have learned and realized the biases that people with disabilities face in the society. I think it's a great course for people who are interested in disability studies."
+            "review": ["I took this course online for satisfying Social Science Breadth. It seemed like an easy course because the average grade is relatively high. However, I think it might be a little bit challenging for slow readers. We generally have to read 2 chapters every week and do a discussion post and two replies based on the content we read that week. However, the content is quite interesting and I have learned and realized the biases that people with disabilities face in the society. I think it's a great course for people who are interested in disability studies."]
         },
         {
             "course_code": "BIOCHEM 104",
@@ -30,7 +92,7 @@
             "semester": "Fall 2024",
             "instructor": "Mario Pennella & Richard Amasino",
             "hours": 20,
-            "review": "This is the most chilling course in my college life. I took the online version and the only thing we have is weekly quizzes and short answer assignments, which can be done in less than 1 hour if you took biology in high school. This is the original words from the instructor: \"We try to provide an interesting course that doesn't take up too much time outside of class so you can focus on your courses for your major as many of you are senior students.\" And they have done a great job in doing that. If you are looking for an easy course to knock out some Biological Sciences credits, this is the one."
+            "review": ["This is the most chilling course in my college life. I took the online version and the only thing we have is weekly quizzes and short answer assignments, which can be done in less than 1 hour if you took biology in high school. This is the original words from the instructor: \"We try to provide an interesting course that doesn't take up too much time outside of class so you can focus on your courses for your major as many of you are senior students.\" And they have done a great job in doing that. If you are looking for an easy course to knock out some Biological Sciences credits, this is the one."]
         },
         {
             "course_code": "SOC WORK 100",
@@ -38,7 +100,7 @@
             "semester": "Fall 2024",
             "instructor": "Katarina Craig",
             "hours": 40,
-            "review": "This course is only offered to first year (transfer) students. It's a great course for people who want to knock out some Social Science credits. As long as you can come to class for participation and answer all the prompts in the assignments, you will probably get an A."
+            "review": ["This course is only offered to first year (transfer) students. It's a great course for people who want to knock out some Social Science credits. As long as you can come to class for participation and answer all the prompts in the assignments, you will probably get an A."]
         }
     ]
 }

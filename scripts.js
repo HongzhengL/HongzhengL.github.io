@@ -66,9 +66,14 @@ function courseToNode(course, index) {
     newBadgesDivNode.appendChild(courseInstructor);
     contentNode.appendChild(newBadgesDivNode);
 
-    const courseReview = document.createElement('p');
-    courseReview.textContent = course.review;
-    contentNode.appendChild(courseReview);
+    // Render reviews as markdown
+    if (Array.isArray(course.review)) {
+        course.review.forEach(reviewText => {
+            const reviewElem = document.createElement('div');
+            reviewElem.innerHTML = window.marked ? marked.parse(reviewText) : reviewText;
+            contentNode.appendChild(reviewElem);
+        });
+    }
 
     courseNode.appendChild(courseImageNode);
     courseNode.appendChild(contentNode);
