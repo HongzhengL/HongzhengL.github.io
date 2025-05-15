@@ -23,6 +23,10 @@
             "text": "Demo",
             "items": [
                 {
+                    "text": "Non-Linear LLM Chat-Bot",
+                    "href": "https://chat.hongzhengli.com"
+                },
+                {
                     "text": "Drone Simulation",
                     "href": "https://drone.hongzhengli.com"
                 },

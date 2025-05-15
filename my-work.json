@@ -1,6 +1,29 @@
 {
     "projects": [
         {
+            "title": "Non-Linear Chatbot",
+            "description": [
+                "Solved the problem of linear, hard-to-follow AI conversations by introducing a visual, non-linear conversation model",
+                "Enabled users to easily explore multiple follow-up paths from any response without losing context or getting overwhelmed",
+                "Visualized conversation trees using ReactFlow, allowing intuitive navigation and branching discussions directly from the canvas",
+                "Implemented flexible API integration supporting multiple AI providers (OpenAI, Anthropic) with dynamic model selection",
+                "Provided configurable system prompts and initial messages through JSON files for customizable chat behavior",
+                "Persisted conversation state efficiently with localStorage and optimized UI for smooth user interaction"
+            ],
+            "technologies": ["React", "Javascript", "CSS", "HTML"],
+            "links": [
+                {
+                    "text": "View Demo",
+                    "url": "https://chat.hongzhengli.com"
+                },
+                {
+                    "text": "View Source Code",
+                    "url": "https://github.com/WASD2HJKL/Non-Linear-Chatbot"
+                }
+            ],
+            "image": "assets/images/chatbot.png"
+        },
+        {
             "title": "Drone Simulation",
             "description": [
                 "Built a multi-entity simulator in C++ using Composite Factory",
@@ -71,11 +94,7 @@
                 "Addressed edge cases like invalid remapping and page boundary overflows through iterative debugging",
                 "Managed development across multiple branches with CI configuration, merging, and cleanup"
             ],
-            "technologies": [
-                "C",
-                "Git",
-                "CI/CD"
-            ],
+            "technologies": ["C", "Git", "CI/CD"],
             "links": [
                 {
                     "text": "View Source Code",
@@ -94,11 +113,7 @@
                 "Utilized metrics logging to monitor task scheduling and execution performance in real-time",
                 "Optimized parallel computation of RDD partitions and DAG traversal to avoid deadlocks and efficiently utilize CPU cores"
             ],
-            "technologies": [
-                "C",
-                "Git",
-                "CI/CD"
-            ],
+            "technologies": ["C", "Git", "CI/CD"],
             "links": [
                 {
                     "text": "View Project",
