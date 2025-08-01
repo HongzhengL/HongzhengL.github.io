@@ -1,0 +1,104 @@
+{
+    "courses": [
+        {
+            "course_code": "CMU 15-445",
+            "image": "assets/images/bustub.svg",
+            "semester": "2025年夏季",
+            "hours": "N/A",
+            "review": [
+                "我还在学习这门课程..."
+            ]
+        },
+        {
+            "course_code": "COMP SCI 537",
+            "image": "assets/images/comp_sci_537.png",
+            "semester": "2025年春季",
+            "instructor": "Michael Swift",
+            "hours": 130,
+            "review": [
+                "这门课程确实极具挑战性，每周需要阅读2-4章，有时甚至6章教科书内容。虽然项目数量不多，但质量很高。由于同时修读其他三门CS课程，我没能获得足够的系统编程实践经验。如果有机会，我计划选修研究生级别的OS课程来弥补这一差距。",
+                "关于考试资源不平等的问题，我在[这里](./assets/pdf/cs537_past_exam.pdf)分享了一些过往试题，希望能帮助大家公平竞争。"
+            ]
+        },
+        {
+            "course_code": "COMP SCI 557",
+            "image": "assets/images/comp_sci_557.png",
+            "semester": "2025年春季",
+            "instructor": "Eftychios Sifakis",
+            "hours": 55,
+            "review": [
+                "这是一门专注于代码优化的优秀课程。前半学期学习General Matrix Multiplication (GEMM)优化，后半学期涉及稀疏矩阵、密集矩阵库使用，以及卷积和CUDA基础。作为中级课程，工作量适中，5个作业主要是基准测试。Sifakis教授喜欢在考试中重复使用样题知识点。"
+            ]
+        },
+        {
+            "course_code": "COMP SCI 544",
+            "image": "assets/images/tar-meme.png",
+            "semester": "2025年春季",
+            "instructor": "Tyler Caraza-harter",
+            "hours": 60,
+            "review": [
+                "这门课程教授了很多实用工具，但我发现很难完全掌握（就像meme中的`tar`命令一样）。课程更适合从CS320路径来的学生，对于CS400背景的学生来说可能有些挑战。Tyler教授经常在考试中重复使用过往题目，制作好的备忘单很重要。这里是我的[期末备忘单](./assets/pdf/CS544_Cheat_Sheet_Exam_3.pdf)。"
+            ]
+        },
+        {
+            "course_code": "COMP SCI 571",
+            "image": "assets/images/comp_sci_571.png",
+            "semester": "2025年春季",
+            "instructor": "Cole Nelson & Yaxin Hu",
+            "hours": 70,
+            "review": [
+                "选这门课主要是为了满足应用要求和早点毕业。React和React Native项目比较耗时。考试有一定难度。重要提示：在收到API邮件前不要使用邮箱别名，否则可能被误判为代码抄袭。设计课程对考试帮助不大，重点是准备好备忘单。这里是我的[期末备忘单](./assets/pdf/CS571_Final_Cheat_Sheet.pdf)样例。"
+            ]
+        },
+        {
+            "course_code": "CURRIC 277",
+            "image": "assets/images/curric_277.png",
+            "semester": "2025年春季",
+            "instructor": "Krista-lee Malone & Nathan Batty",
+            "hours": 30,
+            "review": [
+                "如果不是期中周要交几乎完成的论文草稿，这会是我在麦迪逊最轻松的课程。我们基本上就是玩电子游戏、写日记、然后写论文。TA会很大程度影响你的课程体验。我很幸运有Nathan作为TA，他不强制要求课堂发言来获得参与分数。对于像我这样不喜欢在大群体面前发言的人，建议选择在线版本。"
+            ]
+        },
+        {
+            "course_code": "COMP SCI 272",
+            "image": "assets/images/comp_sci_272.jpg",
+            "semester": "2024年秋季",
+            "instructor": "Cole Nelson",
+            "hours": 40,
+            "review": ["这是该课程的首次开设，质量出人意料地好。对初学者来说很棒，即使有编程经验的学生也能学到东西。不过作业量偏少，我希望能有更多练习。如果当时有CS 472可选，我会选择那门课。"]
+        },
+        {
+            "course_code": "COMP SCI 400",
+            "image": "assets/images/comp_sci_400.jpg",
+            "semester": "2024年秋季",
+            "instructor": "Florian Heimerl",
+            "hours": 70,
+            "review": ["作为UW Madison计算机科学的第三门入门课程，它很好地覆盖了广泛的主题。但广度是以深度为代价的。如果真想学到东西，建议阅读可选材料。有些内容稍显过时，比如Java项目使用Makefile就很奇怪，用Maven或Gradle会更好。不过Heimerl教授解释概念很棒，认真听课就能掌握。"]
+        },
+        {
+            "course_code": "RP & SE 100",
+            "image": "assets/images/rp_se_100.jpg",
+            "semester": "2024年秋季",
+            "instructor": "Yuewn-lann Yang & Jahyun Yoo",
+            "hours": 90,
+            "review": ["选这门在线课程是为了满足社会科学广度要求。看起来简单但对阅读速度慢的学生可能有挑战性。每周需要读2章内容并完成讨论帖和回复。内容很有趣，让我了解到残疾人士在社会中面临的偏见。对残疾研究感兴趣的学生来说是很好的选择。"]
+        },
+        {
+            "course_code": "BIOCHEM 104",
+            "image": "assets/images/biochem_104.jpg",
+            "semester": "2024年秋季",
+            "instructor": "Mario Pennella & Richard Amasino",
+            "hours": 20,
+            "review": ["这是我大学生涯最轻松的课程。在线版本只有每周测验和简答作业，如果高中学过生物，1小时内就能完成。正如教师所说：'我们努力提供有趣但不占用太多课外时间的课程，让你们能专注于专业课程，因为很多人都是高年级学生。'如果你在寻找轻松的生物科学学分，这就是最佳选择。"]
+        },
+        {
+            "course_code": "SOC WORK 100",
+            "image": "assets/images/soc_work_100.jpg",
+            "semester": "2024年秋季",
+            "instructor": "Katarina Craig",
+            "hours": 40,
+            "review": ["这门课程只对一年级（转学）学生开放。对想要获得社会科学学分的学生来说很不错。只要能到课参与讨论并完成作业中的所有问题，基本上就能得A。"]
+        }
+    ]
+}

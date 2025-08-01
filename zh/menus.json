@@ -1,0 +1,55 @@
+{
+    "menuItems": [
+        {
+            "type": "dropdown",
+            "text": "社交链接",
+            "items": [
+                {
+                    "text": "LinkedIn",
+                    "href": "https://www.linkedin.com/in/hongzheng-li-uwmadison"
+                },
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/HongzhengL"
+                },
+                {
+                    "text": "个人Git平台",
+                    "href": "https://git.hongzhengli.com"
+                }
+            ]
+        },
+        {
+            "type": "dropdown",
+            "text": "演示",
+            "items": [
+                {
+                    "text": "非线性LLM聊天机器人",
+                    "href": "https://chat.hongzhengli.com"
+                },
+                {
+                    "text": "无人机仿真",
+                    "href": "https://drone.hongzhengli.com"
+                },
+                {
+                    "text": "Badger Buddies",
+                    "href": "https://badger-buddies.hongzhengli.com"
+                }
+            ]
+        },
+        {
+            "type": "link",
+            "text": "关于我",
+            "href": "index.html"
+        },
+        {
+            "type": "link",
+            "text": "我的作品",
+            "href": "my-work.html"
+        },
+        {
+            "type": "link",
+            "text": "课程评价",
+            "href": "course-review.html"
+        }
+    ]
+}

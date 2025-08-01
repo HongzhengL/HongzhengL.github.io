@@ -1,6 +1,8 @@
-// Generate menu from JSON data
-function generateMenu() {
-    fetch("menus.json")
+// Generate menu from JSON data with language detection
+function generateMenu(jsonPath) {
+    const menuJsonPath = jsonPath || "menus.json";
+    
+    fetch(menuJsonPath)
         .then(response => response.json())
         .then(data => {
             const menuContainer = document.getElementById('dynamic-menu');
@@ -45,7 +47,79 @@ function generateMenu() {
 
                 menuContainer.appendChild(li);
             });
+            
+            // Add language switcher after menu is loaded
+            addLanguageSwitcher();
         });
+}
+
+// Add language switcher to navigation
+function addLanguageSwitcher() {
+    const currentLang = getCurrentLanguage();
+    const oppositeLang = currentLang === 'en' ? 'zh' : 'en';
+    const oppositeUrl = getOppositeLanguageUrl(window.location.pathname);
+    
+    const languageSwitcher = document.createElement('li');
+    languageSwitcher.className = 'nav-item';
+    
+    const switcherLink = document.createElement('a');
+    switcherLink.className = 'nav-link';
+    switcherLink.href = oppositeUrl;
+    switcherLink.textContent = oppositeLang === 'zh' ? '中文' : 'English';
+    switcherLink.addEventListener('click', function() {
+        setLanguagePreference(oppositeLang);
+    });
+    
+    languageSwitcher.appendChild(switcherLink);
+    
+    const menu = document.getElementById('dynamic-menu');
+    if (menu) {
+        menu.appendChild(languageSwitcher);
+    }
+}
+
+// Get current language from URL
+function getCurrentLanguage() {
+    const path = window.location.pathname;
+    return path.startsWith('/zh/') || path === '/zh' ? 'zh' : 'en';
+}
+
+// Get opposite language URL
+function getOppositeLanguageUrl(currentPath) {
+    const currentLang = getCurrentLanguage();
+    
+    if (currentLang === 'en') {
+        if (currentPath === '/' || currentPath === '/index.html') {
+            return '/zh/index.html';
+        }
+        if (currentPath === '/course-review.html') {
+            return '/zh/course-review.html';
+        }
+        if (currentPath === '/my-work.html') {
+            return '/zh/my-work.html';
+        }
+        return '/zh/index.html';
+    } else {
+        if (currentPath === '/zh/' || currentPath === '/zh/index.html') {
+            return '/index.html';
+        }
+        if (currentPath === '/zh/course-review.html') {
+            return '/course-review.html';
+        }
+        if (currentPath === '/zh/my-work.html') {
+            return '/my-work.html';
+        }
+        return '/index.html';
+    }
+}
+
+// Set language preference
+function setLanguagePreference(language) {
+    try {
+        localStorage.setItem('preferredLanguage', language);
+    } catch (e) {
+        // Silently fail if localStorage unavailable
+    }
 }
 
 // Initialize menu

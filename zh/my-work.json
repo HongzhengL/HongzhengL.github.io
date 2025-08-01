@@ -1,0 +1,126 @@
+{
+    "projects": [
+        {
+            "title": "非线性聊天机器人",
+            "description": [
+                "通过引入可视化的非线性对话模型，解决了AI对话线性且难以跟踪的问题",
+                "让用户能够轻松探索任何回复的多个后续路径，既不丢失上下文又不感到困惑",
+                "使用ReactFlow可视化对话树，支持直观的导航和从画布直接进行分支讨论",
+                "实现了灵活的API集成，支持多个AI提供商（OpenAI、Anthropic）并可动态选择模型",
+                "通过JSON文件提供可配置的system prompt（系统提示）和初始消息，实现自定义聊天行为",
+                "使用localStorage高效持久化对话状态，并优化UI以实现流畅的用户交互"
+            ],
+            "technologies": ["React", "Javascript", "CSS", "HTML"],
+            "links": [
+                {
+                    "text": "查看演示",
+                    "url": "https://chat.hongzhengli.com"
+                },
+                {
+                    "text": "查看源代码",
+                    "url": "https://github.com/WASD2HJKL/Non-Linear-Chatbot"
+                }
+            ],
+            "image": "assets/images/chatbot.png"
+        },
+        {
+            "title": "无人机仿真系统",
+            "description": [
+                "使用Composite Factory（组合工厂模式）在C++中构建多实体仿真器",
+                "使用Decorator pattern（装饰器模式）扩展实体功能",
+                "实现Observer pattern（观察者模式）进行实时通知，向TypeScript前端发送JSON事件",
+                "使用Docker容器化环境，实现统一的构建和部署",
+                "采用CI/CD pipeline（持续集成/持续部署管道）自动化测试和部署",
+                "实践Scrum方法论，使用Git进行协作开发和版本控制"
+            ],
+            "technologies": [
+                "C++",
+                "TypeScript",
+                "Docker",
+                "Docker Compose",
+                "CI/CD",
+                "Git"
+            ],
+            "links": [
+                {
+                    "text": "阅读文档",
+                    "url": "https://docs.hongzhengli.com/drone-simulation/classes.html"
+                },
+                {
+                    "text": "试玩",
+                    "url": "https://drone.hongzhengli.com"
+                },
+                {
+                    "text": "查看源代码",
+                    "url": "https://git.hongzhengli.com/Drone_Simulation"
+                },
+                {
+                    "text": "立即部署",
+                    "url": "https://github.com/HongzhengL/drone-simulation"
+                }
+            ],
+            "image": "assets/images/Drone_Simulation_UI.png"
+        },
+        {
+            "title": "分布式地址查询系统",
+            "description": [
+                "使用gRPC和Flask构建多容器应用程序，实现威斯康星州麦迪逊市地址查询功能",
+                "实现LRU缓存（最近最少使用缓存）和负载均衡的gRPC请求以优化性能",
+                "使用Docker和Docker Compose实现一致的容器化部署",
+                "添加重试逻辑和服务器复制以优雅地处理故障"
+            ],
+            "technologies": [
+                "Python",
+                "gRPC",
+                "Flask",
+                "Docker",
+                "Docker Compose"
+            ],
+            "links": [
+                {
+                    "text": "查看源代码",
+                    "url": "https://git.hongzhengli.com/CS544/proj-2/~files"
+                }
+            ],
+            "image": "assets/images/look_up_system.png"
+        },
+        {
+            "title": "xv6 Transparent Huge Page（透明大页面）支持",
+            "description": [
+                "扩展xv6内核，通过自定义物理分配器（khugealloc、khugefree）支持4MB大页面分配",
+                "开发用户级vmalloc/vfree，支持基础或大页面，具有robust error handling（健壮的错误处理）和输入验证",
+                "为malloc()添加transparent huge page support（透明大页面支持THP），使用基于大小的启发式算法（1MB阈值）",
+                "创建系统调用（setthp、procpgdirinfo、printhugpde）用于控制和调试THP分配",
+                "通过迭代调试解决edge case（边缘情况），如无效重映射和页面边界溢出",
+                "跨多个分支管理开发，包括CI配置、合并和清理"
+            ],
+            "technologies": ["C", "Git", "CI/CD"],
+            "links": [
+                {
+                    "text": "查看源代码",
+                    "url": "https://github.com/HongzhengL/xv6-thp"
+                }
+            ],
+            "image": "assets/images/xv6-thp.png"
+        },
+        {
+            "title": "MiniSpark - 分布式数据处理框架",
+            "description": [
+                "开发基于线程的Apache Spark迷你实现，用于单节点并行数据处理",
+                "使用Resilient Distributed Datasets (RDD，弹性分布式数据集)构建Directed Acyclic Graph (DAG，有向无环图)模型来组织数据处理任务",
+                "实现常见数据转换操作，如map、filter、join和partitionBy，支持跨工作线程并行执行",
+                "使用自定义线程池和带condition variables（条件变量）的同步任务队列管理并发执行",
+                "利用metrics logging（指标日志记录）实时监控任务调度和执行性能",
+                "优化RDD分区的并行计算和DAG遍历，避免死锁并高效利用CPU核心"
+            ],
+            "technologies": ["C", "Git", "CI/CD"],
+            "links": [
+                {
+                    "text": "查看项目",
+                    "url": "https://git.hongzhengli.com/CS537-Intro-OS/25Spring-p5-miniSpark"
+                }
+            ],
+            "image": "assets/images/miniSpark.png"
+        }
+    ]
+}
