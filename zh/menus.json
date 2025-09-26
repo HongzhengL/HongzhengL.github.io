@@ -13,7 +13,7 @@
                     "href": "https://github.com/HongzhengL"
                 },
                 {
-                    "text": "个人Git平台",
+                    "text": "自建 Git 平台",
                     "href": "https://git.hongzhengli.com"
                 }
             ]
@@ -23,7 +23,7 @@
             "text": "演示",
             "items": [
                 {
-                    "text": "非线性LLM聊天机器人",
+                    "text": "非线性 LLM 聊天机器人",
                     "href": "https://chat.hongzhengli.com"
                 },
                 {

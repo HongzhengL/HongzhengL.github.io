@@ -3,12 +3,12 @@
         {
             "title": "非线性聊天机器人",
             "description": [
-                "通过引入可视化的非线性对话模型，解决了AI对话线性且难以跟踪的问题",
-                "让用户能够轻松探索任何回复的多个后续路径，既不丢失上下文又不感到困惑",
-                "使用ReactFlow可视化对话树，支持直观的导航和从画布直接进行分支讨论",
-                "实现了灵活的API集成，支持多个AI提供商（OpenAI、Anthropic）并可动态选择模型",
-                "通过JSON文件提供可配置的system prompt（系统提示）和初始消息，实现自定义聊天行为",
-                "使用localStorage高效持久化对话状态，并优化UI以实现流畅的用户交互"
+                "构建可视化的非线性对话模型，解决传统 AI 对话线性难追踪的问题",
+                "让用户能从任意回复延展多个分支，同时保持上下文不丢失",
+                "通过 React Flow 绘制对话树，可在画布上直观导航并继续分支讨论",
+                "封装可插拔的 API，支持 OpenAI、Anthropic 等模型并可动态切换",
+                "以 JSON 配置 system prompt 和初始消息，便于定制对话风格",
+                "使用 localStorage 持久化会话状态，并调优界面交互体验"
             ],
             "technologies": ["React", "Javascript", "CSS", "HTML"],
             "links": [
@@ -26,12 +26,12 @@
         {
             "title": "无人机仿真系统",
             "description": [
-                "使用Composite Factory（组合工厂模式）在C++中构建多实体仿真器",
-                "使用Decorator pattern（装饰器模式）扩展实体功能",
-                "实现Observer pattern（观察者模式）进行实时通知，向TypeScript前端发送JSON事件",
-                "使用Docker容器化环境，实现统一的构建和部署",
-                "采用CI/CD pipeline（持续集成/持续部署管道）自动化测试和部署",
-                "实践Scrum方法论，使用Git进行协作开发和版本控制"
+                "在 C++ 中以 Composite Factory（组合工厂）模式组织多实体仿真",
+                "运用 Decorator（装饰器）模式按需扩展实体能力",
+                "实现 Observer（观察者）机制，实时向 TypeScript 前端推送 JSON 事件",
+                "通过 Docker 容器统一构建、测试与部署流程",
+                "建立 CI/CD 流水线，实现自动化测试与发布",
+                "按 Scrum 节奏协作，并以 Git 管理版本"
             ],
             "technologies": [
                 "C++",
@@ -64,10 +64,10 @@
         {
             "title": "分布式地址查询系统",
             "description": [
-                "使用gRPC和Flask构建多容器应用程序，实现威斯康星州麦迪逊市地址查询功能",
-                "实现LRU缓存（最近最少使用缓存）和负载均衡的gRPC请求以优化性能",
-                "使用Docker和Docker Compose实现一致的容器化部署",
-                "添加重试逻辑和服务器复制以优雅地处理故障"
+                "以 gRPC 搭配 Flask 构建多容器服务，提供麦迪逊市地址查询",
+                "实现 LRU 缓存与负载均衡 gRPC 请求，提升响应速度",
+                "通过 Docker 与 Docker Compose 保持各环境配置一致",
+                "加入重试与多副本策略，提升故障恢复能力"
             ],
             "technologies": [
                 "Python",
@@ -87,12 +87,12 @@
         {
             "title": "xv6 Transparent Huge Page（透明大页面）支持",
             "description": [
-                "扩展xv6内核，通过自定义物理分配器（khugealloc、khugefree）支持4MB大页面分配",
-                "开发用户级vmalloc/vfree，支持基础或大页面，具有robust error handling（健壮的错误处理）和输入验证",
-                "为malloc()添加transparent huge page support（透明大页面支持THP），使用基于大小的启发式算法（1MB阈值）",
-                "创建系统调用（setthp、procpgdirinfo、printhugpde）用于控制和调试THP分配",
-                "通过迭代调试解决edge case（边缘情况），如无效重映射和页面边界溢出",
-                "跨多个分支管理开发，包括CI配置、合并和清理"
+                "扩展 xv6 内核，自研物理内存分配器（khugealloc/khugefree）以支持 4 MB 大页",
+                "实现用户态 vmalloc/vfree，兼容常规页与大页，并强化异常处理与参数校验",
+                "为 malloc() 增加透明大页（THP）策略，采用 1 MB 阈值的启发式算法",
+                "新增 setthp、procpgdirinfo、printhugpde 等系统调用，便于控制与调试 THP 分配",
+                "多轮迭代修复极端场景，例如非法重映射与页边界越界",
+                "维护多条开发分支，完成 CI 配置、合并与清理"
             ],
             "technologies": ["C", "Git", "CI/CD"],
             "links": [
@@ -106,12 +106,12 @@
         {
             "title": "MiniSpark - 分布式数据处理框架",
             "description": [
-                "开发基于线程的Apache Spark迷你实现，用于单节点并行数据处理",
-                "使用Resilient Distributed Datasets (RDD，弹性分布式数据集)构建Directed Acyclic Graph (DAG，有向无环图)模型来组织数据处理任务",
-                "实现常见数据转换操作，如map、filter、join和partitionBy，支持跨工作线程并行执行",
-                "使用自定义线程池和带condition variables（条件变量）的同步任务队列管理并发执行",
-                "利用metrics logging（指标日志记录）实时监控任务调度和执行性能",
-                "优化RDD分区的并行计算和DAG遍历，避免死锁并高效利用CPU核心"
+                "编写基于线程的 Mini Spark，实现单机并行数据处理",
+                "用 RDD（弹性分布式数据集）构建 DAG（有向无环图）来编排任务",
+                "支持 map、filter、join、partitionBy 等常见转换，并在多线程间并行执行",
+                "自建线程池与含条件变量的任务队列，稳健调度并发作业",
+                "记录运行指标，实时观察任务调度与执行表现",
+                "优化 RDD 分区计算与 DAG 遍历，避免死锁并充分利用 CPU 核心"
             ],
             "technologies": ["C", "Git", "CI/CD"],
             "links": [
