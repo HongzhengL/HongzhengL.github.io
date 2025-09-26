@@ -7,17 +7,17 @@ function addBackToTopButton() {
 
     button.addEventListener("click", () => {
         window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+            top: 0,
+            behavior: "smooth",
         });
     });
 
     // Show/hide button based on scroll position
     window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
-        button.style.display = "block";
+            button.style.display = "block";
         } else {
-        button.style.display = "none";
+            button.style.display = "none";
         }
     });
 

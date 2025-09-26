@@ -5,9 +5,7 @@
             "image": "assets/images/bustub.svg",
             "semester": "Summer 2025",
             "hours": "N/A",
-            "review": [
-                "I'm still taking it..."
-            ]
+            "review": ["I'm still taking it..."]
         },
         {
             "course_code": "COMP SCI 537",
@@ -16,8 +14,7 @@
             "instructor": "Michael Swift",
             "hours": 130,
             "review": [
-                "Before taking this course, I had very high expectations because I'd heard that it's extremely challenging. That turned out to be true—you're expected to read 2 to 4, or sometimes even 6, textbook chapters each week and fully digest the material. However, I have to admit I was a bit disappointed with the projects offered, at least for this spring. I was ready to spend days and nights working on them, but only two projects gave me some level of that engagement. That wasn't because the projects were too challenging, it was more because I had heavy commitments with my three other CS courses and had little time for that. I didn't end up with too much hands-on experience writing complex system calls or functions. Because of that, if there's a spot available in the graduate-level OS course next semester, I'm planning to take it to fill that gap.",
-                "Also, I don't really like the fact that some people have access to past exam papers while others don't. That creates an unfair advantage. To help address this, I'm sharing what I have [here](./assets/pdf/cs537_past_exam.pdf). If you can, please share it with your classmates to help level the playing field."
+                "Before taking this course, I had very high expectations because I'd heard that it's extremely challenging. That turned out to be true—you're expected to read 2 to 4, or sometimes even 6, textbook chapters each week and fully digest the material. However, I have to admit I was a bit disappointed with the projects offered, at least for this spring. I was ready to spend days and nights working on them, but only two projects gave me some level of that engagement. That wasn't because the projects were too challenging, it was more because I had heavy commitments with my three other CS courses and had little time for that. I didn't end up with too much hands-on experience writing complex system calls or functions. Because of that, if there's a spot available in the graduate-level OS course next semester, I'm planning to take it to fill that gap."
             ]
         },
         {
@@ -68,7 +65,9 @@
             "semester": "Fall 2024",
             "instructor": "Cole Nelson",
             "hours": 40,
-            "review": ["This was the inaugural offering of this course, and I was pleasantly surprised by its quality. It's an excellent course for beginners, yet even as someone with prior programming experience, I can still get something out of it. However, the amount of work is too little. I wish there were more assignments. If CS 472 had been available that semester, I would have taken that instead."]
+            "review": [
+                "This was the inaugural offering of this course, and I was pleasantly surprised by its quality. It's an excellent course for beginners, yet even as someone with prior programming experience, I can still get something out of it. However, the amount of work is too little. I wish there were more assignments. If CS 472 had been available that semester, I would have taken that instead."
+            ]
         },
         {
             "course_code": "COMP SCI 400",
@@ -76,7 +75,9 @@
             "semester": "Fall 2024",
             "instructor": "Florian Heimerl",
             "hours": 70,
-            "review": ["As the third introductory course of Computer Science at UW Madison, it has done a decent job of covering a broad range of topics. However, the breadth of the material comes at the cost of depth. If you truly want to learn something, you might want to read the optional reading. Meanwhile, some of the topics are a little bit outdated. For example, it's quite weird that we are using Makefile for Java projects. I think it would be better if we use Maven or Gradle. Despite this, Professor Heimerl has done a great job in explaining the concepts. As long as you listen to the lecture, you should be fine."]
+            "review": [
+                "As the third introductory course of Computer Science at UW Madison, it has done a decent job of covering a broad range of topics. However, the breadth of the material comes at the cost of depth. If you truly want to learn something, you might want to read the optional reading. Meanwhile, some of the topics are a little bit outdated. For example, it's quite weird that we are using Makefile for Java projects. I think it would be better if we use Maven or Gradle. Despite this, Professor Heimerl has done a great job in explaining the concepts. As long as you listen to the lecture, you should be fine."
+            ]
         },
         {
             "course_code": "RP & SE 100",
@@ -84,7 +85,9 @@
             "semester": "Fall 2024",
             "instructor": "Yuewn-lann Yang & Jahyun Yoo",
             "hours": 90,
-            "review": ["I took this course online for satisfying Social Science Breadth. It seemed like an easy course because the average grade is relatively high. However, I think it might be a little bit challenging for slow readers. We generally have to read 2 chapters every week and do a discussion post and two replies based on the content we read that week. However, the content is quite interesting and I have learned and realized the biases that people with disabilities face in the society. I think it's a great course for people who are interested in disability studies."]
+            "review": [
+                "I took this course online for satisfying Social Science Breadth. It seemed like an easy course because the average grade is relatively high. However, I think it might be a little bit challenging for slow readers. We generally have to read 2 chapters every week and do a discussion post and two replies based on the content we read that week. However, the content is quite interesting and I have learned and realized the biases that people with disabilities face in the society. I think it's a great course for people who are interested in disability studies."
+            ]
         },
         {
             "course_code": "BIOCHEM 104",
@@ -92,7 +95,9 @@
             "semester": "Fall 2024",
             "instructor": "Mario Pennella & Richard Amasino",
             "hours": 20,
-            "review": ["This is the most chilling course in my college life. I took the online version and the only thing we have is weekly quizzes and short answer assignments, which can be done in less than 1 hour if you took biology in high school. This is the original words from the instructor: \"We try to provide an interesting course that doesn't take up too much time outside of class so you can focus on your courses for your major as many of you are senior students.\" And they have done a great job in doing that. If you are looking for an easy course to knock out some Biological Sciences credits, this is the one."]
+            "review": [
+                "This is the most chilling course in my college life. I took the online version and the only thing we have is weekly quizzes and short answer assignments, which can be done in less than 1 hour if you took biology in high school. This is the original words from the instructor: \"We try to provide an interesting course that doesn't take up too much time outside of class so you can focus on your courses for your major as many of you are senior students.\" And they have done a great job in doing that. If you are looking for an easy course to knock out some Biological Sciences credits, this is the one."
+            ]
         },
         {
             "course_code": "SOC WORK 100",
@@ -100,7 +105,9 @@
             "semester": "Fall 2024",
             "instructor": "Katarina Craig",
             "hours": 40,
-            "review": ["This course is only offered to first year (transfer) students. It's a great course for people who want to knock out some Social Science credits. As long as you can come to class for participation and answer all the prompts in the assignments, you will probably get an A."]
+            "review": [
+                "This course is only offered to first year (transfer) students. It's a great course for people who want to knock out some Social Science credits. As long as you can come to class for participation and answer all the prompts in the assignments, you will probably get an A."
+            ]
         }
     ]
 }
