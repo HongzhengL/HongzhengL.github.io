@@ -50,6 +50,42 @@ h1, h2 {
     border-radius: 5px;
 }
 
+.education-entry {
+    margin-bottom: 20px;
+}
+
+.education-emblem {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.education-emblem-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+}
+
+.education-details {
+    gap: 0.25rem;
+}
+
+.education-meta {
+    text-align: right;
+}
+
+@media (max-width: 767.98px) {
+    .education-entry {
+        text-align: center;
+    }
+
+    .education-meta {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
 .container {
     flex: 1;
 }
