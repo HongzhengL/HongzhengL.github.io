@@ -3,187 +3,263 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>关于我 - 李弘政的主页</title>
+        <title>我的项目 · 李弘政</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                50: "#eef2ff",
+                                100: "#e0e7ff",
+                                200: "#c7d2fe",
+                                300: "#a5b4fc",
+                                400: "#818cf8",
+                                500: "#6366f1",
+                                600: "#4f46e5",
+                                700: "#4338ca",
+                                800: "#3730a3",
+                                900: "#312e81",
+                            },
+                        },
+                        fontFamily: {
+                            sans: [
+                                "Inter",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "-apple-system",
+                                "BlinkMacSystemFont",
+                                "Segoe UI",
+                                "sans-serif",
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
         <link href="../styles.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     </head>
 
-    <body>
-        <nav
-            class="navbar navbar-expand-lg navbar-light"
-            style="
-                background-color: skyblue;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="/">李弘政的主页</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" id="dynamic-menu">
-                        <!-- Menu items will be dynamically inserted here -->
-                    </ul>
-                </div>
+    <body class="bg-slate-950 font-sans text-slate-100">
+        <div class="relative overflow-hidden">
+            <div
+                class="pointer-events-none fixed inset-0 -z-10 opacity-70"
+                aria-hidden="true">
+                <div
+                    class="absolute left-1/2 top-[-18%] h-[60vh] w-[60vw] -translate-x-1/2 rounded-full bg-primary/30 blur-[140px]"></div>
+                <div
+                    class="absolute right-[-10%] top-1/3 h-[40vh] w-[35vw] rounded-full bg-emerald-400/20 blur-[120px]"></div>
+                <div
+                    class="absolute left-[-10%] bottom-[-10%] h-[45vh] w-[40vw] rounded-full bg-sky-500/20 blur-[140px]"></div>
             </div>
-        </nav>
 
-        <section class="container mt-5">
-            <h1 class="mb-4"><strong>我的作品</strong></h1>
-            <div id="projects-container"></div>
-        </section>
+            <nav
+                class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+                <div
+                    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                    <a
+                        class="flex items-center gap-3 text-lg font-semibold text-white"
+                        href="/zh/index.html">
+                        <span
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-primary/20 text-sm font-bold text-primary-100"
+                            >HL</span
+                        >
+                        <span class="hidden sm:inline">李弘政的主页</span>
+                    </a>
+                    <div class="flex items-center gap-3 md:hidden">
+                        <a
+                            href="../HongzhengLi.pdf"
+                            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+                            <i class="fa-solid fa-download text-primary-100"></i>
+                            <span>下载简历</span>
+                        </a>
+                        <button
+                            id="nav-toggle"
+                            type="button"
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                            aria-controls="mobile-nav"
+                            aria-expanded="false">
+                            <span class="sr-only">展开导航</span>
+                            <svg
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    d="M3 5.5A1.5 1.5 0 014.5 4h11a1.5 1.5 0 010 3h-11A1.5 1.5 0 013 5.5zM3 10a1.5 1.5 0 011.5-1.5h11A1.5 1.5 0 0116 10a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 10zm1.5 3.5a1.5 1.5 0 000 3h11a1.5 1.5 0 000-3h-11z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul id="dynamic-menu" class="hidden items-center gap-1 md:flex"></ul>
+                    <a
+                        href="../HongzhengLi.pdf"
+                        data-resume-link="desktop"
+                        class="hidden md:inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-2 text-sm font-semibold text-primary-100 transition hover:bg-primary/25">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>下载简历</span>
+                    </a>
+                </div>
+                <div
+                    id="mobile-nav"
+                    class="mx-4 mt-3 hidden flex-col gap-4 rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-2xl md:hidden">
+                    <ul id="dynamic-menu-mobile" class="flex flex-col gap-2"></ul>
+                    <a
+                        href="../HongzhengLi.pdf"
+                        data-resume-link="mobile"
+                        class="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary/40 bg-primary/20 px-4 py-3 text-sm font-semibold text-primary-100 transition hover:bg-primary/30">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>下载简历</span>
+                    </a>
+                </div>
+            </nav>
+
+            <main class="relative z-10">
+                <section class="mx-auto max-w-6xl px-6 pt-32 pb-12">
+                    <h1 class="text-4xl font-bold text-white sm:text-5xl">我的项目</h1>
+                    <p class="mt-4 max-w-2xl text-lg text-slate-200">
+                        汇集我在系统性能、工具工程与全栈体验上的实践。每个卡片都包含技术栈、核心亮点与延伸阅读链接。
+                    </p>
+                </section>
+
+                <section class="mx-auto max-w-6xl px-6 pb-20">
+                    <div
+                        id="projects-container"
+                        class="grid gap-8 lg:grid-cols-2"></div>
+                </section>
+            </main>
+
+            <footer
+                class="border-t border-white/10 bg-slate-950/80 py-10 text-center text-sm text-slate-300">
+                <div class="mx-auto flex max-w-4xl flex-col gap-4 px-6">
+                    <p>如果想深入了解某个项目，欢迎随时联系。</p>
+                    <p>
+                        邮箱：
+                        <a
+                            href="mailto:hongzheng@cs.wisc.edu"
+                            class="font-semibold text-primary-100 underline decoration-dotted underline-offset-4">
+                            hongzheng@cs.wisc.edu
+                        </a>
+                    </p>
+                </div>
+            </footer>
+        </div>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", () => {
+                const container = document.getElementById("projects-container");
+                if (!container) {
+                    return;
+                }
+
                 fetch("my-work.json")
                     .then((response) => response.json())
                     .then((data) => {
-                        const container =
-                            document.getElementById("projects-container");
+                        container.innerHTML = "";
+
                         data.projects.forEach((project) => {
-                            const projectHTML = `
-                            <div class="row align-items-start project mb-4">
-                                <div class="col-md-8">
-                                    <h2><em>${project.title}</em></h2>
-                                    <div class="mb-3">
-                                        ${project.technologies
-                                            .map(
-                                                (tech) => `
-                                            <span class="badge bg-secondary me-1">${tech}</span>
-                                        `,
-                                            )
-                                            .join("")}
-                                    </div>
-                                    <ul>
-                                        ${project.description
-                                            .map((item) => `<li>${item}</li>`)
-                                            .join("")}
-                                    </ul>
-                                    ${project.links
-                                        .map(
-                                            (link) => `
-                                        <a href="${link.url}" class="btn btn-outline-primary">${link.text}</a>
-                                    `,
-                                        )
-                                        .join("")}
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="../${project.image}" alt="${
-                                project.title
-                            }" class="img-fluid">
-                                </div>
-                            </div>
-                        `;
-                            container.insertAdjacentHTML(
-                                "beforeend",
-                                projectHTML,
-                            );
+                            const projectCard = document.createElement("article");
+                            projectCard.className =
+                                "group flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20";
+
+                            const header = document.createElement("div");
+                            header.className =
+                                "flex flex-col gap-4 md:flex-row md:items-center md:justify-between";
+
+                            const titleWrapper = document.createElement("div");
+                            const title = document.createElement("h2");
+                            title.className = "text-2xl font-semibold text-white";
+                            title.textContent = project.title;
+                            titleWrapper.appendChild(title);
+                            header.appendChild(titleWrapper);
+
+                            if (project.timeline) {
+                                const timeline = document.createElement("p");
+                                timeline.className = "text-sm text-slate-400";
+                                timeline.textContent = project.timeline;
+                                header.appendChild(timeline);
+                            }
+
+                            const badgeRow = document.createElement("div");
+                            badgeRow.className = "flex flex-wrap gap-2";
+                            project.technologies.forEach((tech) => {
+                                const badge = document.createElement("span");
+                                badge.className =
+                                    "inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-200";
+                                badge.textContent = tech;
+                                badgeRow.appendChild(badge);
+                            });
+
+                            const summaryList = document.createElement("ul");
+                            summaryList.className = "space-y-3 text-slate-200";
+                            project.description.forEach((item) => {
+                                const li = document.createElement("li");
+                                li.className = "flex gap-3";
+                                li.innerHTML = `
+                                    <span class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                    <span>${item}</span>
+                                `;
+                                summaryList.appendChild(li);
+                            });
+
+                            const mediaWrapper = document.createElement("div");
+                            mediaWrapper.className =
+                                "relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70";
+                            const image = document.createElement("img");
+                            image.src = project.image.startsWith("http")
+                                ? project.image
+                                : `../${project.image}`;
+                            image.alt = project.title;
+                            image.loading = "lazy";
+                            image.className = "h-56 w-full object-cover";
+                            mediaWrapper.appendChild(image);
+
+                            const linkRow = document.createElement("div");
+                            linkRow.className = "flex flex-wrap gap-3";
+                            project.links.forEach((link) => {
+                                const anchor = document.createElement("a");
+                                anchor.href = link.url;
+                                anchor.textContent = link.text;
+                                anchor.className =
+                                    "inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-50 transition hover:bg-primary/25";
+                                const isExternal = /^https?:\/\//.test(link.url);
+                                if (isExternal) {
+                                    anchor.target = "_blank";
+                                    anchor.rel = "noopener noreferrer";
+                                }
+                                linkRow.appendChild(anchor);
+                            });
+
+                            projectCard.appendChild(header);
+                            projectCard.appendChild(badgeRow);
+                            projectCard.appendChild(summaryList);
+                            projectCard.appendChild(mediaWrapper);
+                            if (project.links && project.links.length > 0) {
+                                projectCard.appendChild(linkRow);
+                            }
+
+                            container.appendChild(projectCard);
                         });
                     })
-                    .catch((error) =>
-                        console.error("Error loading projects:", error),
-                    );
+                    .catch((error) => {
+                        console.error("Error loading projects:", error);
+                        container.innerHTML =
+                            '<p class="rounded-2xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200">暂时无法加载项目，请稍后再试。</p>';
+                    });
             });
         </script>
 
-        <footer class="bg-light text-dark py-3 position-sticky mt-auto">
-            <p class="text-center">
-                感谢您访问我的网站。<br />
-                如有任何问题或建议，请随时<a
-                    href="mailto:hongzheng@cs.wisc.edu"
-                    class="text-decoration-none text-primary fw-bold"
-                    >联系我</a
-                >。
-            </p>
-        </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Menu Script -->
-        <script>
-            // Modified generateMenu function for Chinese version
-            function generateMenu() {
-                fetch("menus.json")
-                    .then((response) => response.json())
-                    .then((data) => {
-                        const menuContainer =
-                            document.getElementById("dynamic-menu");
-                        data.menuItems.forEach((item) => {
-                            const li = document.createElement("li");
-                            li.className = "nav-item";
-
-                            if (item.type === "dropdown") {
-                                li.classList.add("dropdown");
-                                const a = document.createElement("a");
-                                a.className = "nav-link dropdown-toggle";
-                                a.href = "#";
-                                a.id = "navbarDropdown";
-                                a.role = "button";
-                                a.setAttribute("data-bs-toggle", "dropdown");
-                                a.setAttribute("aria-expanded", "false");
-                                a.textContent = item.text;
-
-                                const ul = document.createElement("ul");
-                                ul.className = "dropdown-menu";
-                                ul.setAttribute(
-                                    "aria-labelledby",
-                                    "navbarDropdown",
-                                );
-
-                                item.items.forEach((subItem) => {
-                                    const subLi = document.createElement("li");
-                                    const subA = document.createElement("a");
-                                    subA.className = "dropdown-item";
-                                    subA.href = subItem.href;
-                                    subA.textContent = subItem.text;
-                                    subLi.appendChild(subA);
-                                    ul.appendChild(subLi);
-                                });
-
-                                li.appendChild(a);
-                                li.appendChild(ul);
-                            } else if (item.type === "link") {
-                                const a = document.createElement("a");
-                                a.className = "nav-link";
-                                a.href = item.href;
-                                a.textContent = item.text;
-                                li.appendChild(a);
-                            }
-
-                            menuContainer.appendChild(li);
-                        });
-
-                        // Add language switcher
-                        const languageSwitcher = document.createElement("li");
-                        languageSwitcher.className = "nav-item";
-
-                        const switcherLink = document.createElement("a");
-                        switcherLink.className = "nav-link";
-                        switcherLink.href = "../my-work.html";
-                        switcherLink.textContent = "English";
-                        switcherLink.addEventListener("click", function () {
-                            try {
-                                localStorage.setItem("preferredLanguage", "en");
-                            } catch (e) {
-                                // Silently fail if localStorage unavailable
-                            }
-                        });
-
-                        languageSwitcher.appendChild(switcherLink);
-                        menuContainer.appendChild(languageSwitcher);
-                    });
-            }
-
-            // Initialize menu
-            generateMenu();
-        </script>
+        <script src="../js/language-switcher.js"></script>
+        <script src="../menu.js"></script>
+        <script src="../js/ui.js"></script>
         <script src="../backToTop.js"></script>
     </body>
 </html>

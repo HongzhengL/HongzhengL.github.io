@@ -3,424 +3,164 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>威斯康星大学麦迪逊分校课程评价</title>
+        <title>威斯康星大学课程评价 · 李弘政</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                50: "#eef2ff",
+                                100: "#e0e7ff",
+                                200: "#c7d2fe",
+                                300: "#a5b4fc",
+                                400: "#818cf8",
+                                500: "#6366f1",
+                                600: "#4f46e5",
+                                700: "#4338ca",
+                                800: "#3730a3",
+                                900: "#312e81",
+                            },
+                        },
+                        fontFamily: {
+                            sans: [
+                                "Inter",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "-apple-system",
+                                "BlinkMacSystemFont",
+                                "Segoe UI",
+                                "sans-serif",
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
         <link href="../styles.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     </head>
 
-    <body>
-        <nav
-            class="navbar navbar-expand-lg navbar-light"
-            style="
-                background-color: skyblue;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="/">李弘政的主页</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" id="dynamic-menu">
-                        <!-- Menu items will be dynamically inserted here -->
-                    </ul>
-                </div>
+    <body class="bg-slate-950 font-sans text-slate-100">
+        <div class="relative overflow-hidden">
+            <div
+                class="pointer-events-none fixed inset-0 -z-10 opacity-70"
+                aria-hidden="true">
+                <div
+                    class="absolute left-1/2 top-[-18%] h-[60vh] w-[60vw] -translate-x-1/2 rounded-full bg-primary/30 blur-[140px]"></div>
+                <div
+                    class="absolute right-[-10%] top-1/3 h-[40vh] w-[35vw] rounded-full bg-emerald-400/20 blur-[120px]"></div>
+                <div
+                    class="absolute left-[-10%] bottom-[-10%] h-[45vh] w-[40vw] rounded-full bg-sky-500/20 blur-[140px]"></div>
             </div>
-        </nav>
 
-        <section class="container mt-5">
-            <h1 id="review-title" class="mb-4 text-primary">
-                <strong>课程评价</strong>
-            </h1>
+            <nav
+                class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+                <div
+                    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                    <a
+                        class="flex items-center gap-3 text-lg font-semibold text-white"
+                        href="/zh/index.html">
+                        <span
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-primary/20 text-sm font-bold text-primary-100"
+                            >HL</span
+                        >
+                        <span class="hidden sm:inline">李弘政的主页</span>
+                    </a>
+                    <div class="flex items-center gap-3 md:hidden">
+                        <a
+                            href="../HongzhengLi.pdf"
+                            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+                            <i class="fa-solid fa-download text-primary-100"></i>
+                            <span>下载简历</span>
+                        </a>
+                        <button
+                            id="nav-toggle"
+                            type="button"
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                            aria-controls="mobile-nav"
+                            aria-expanded="false">
+                            <span class="sr-only">展开导航</span>
+                            <svg
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    d="M3 5.5A1.5 1.5 0 014.5 4h11a1.5 1.5 0 010 3h-11A1.5 1.5 0 013 5.5zM3 10a1.5 1.5 0 011.5-1.5h11A1.5 1.5 0 0116 10a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 10zm1.5 3.5a1.5 1.5 0 000 3h11a1.5 1.5 0 000-3h-11z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul id="dynamic-menu" class="hidden items-center gap-1 md:flex"></ul>
+                    <a
+                        href="../HongzhengLi.pdf"
+                        data-resume-link="desktop"
+                        class="hidden md:inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-2 text-sm font-semibold text-primary-100 transition hover:bg-primary/25">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>下载简历</span>
+                    </a>
+                </div>
+                <div
+                    id="mobile-nav"
+                    class="mx-4 mt-3 hidden flex-col gap-4 rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-2xl md:hidden">
+                    <ul id="dynamic-menu-mobile" class="flex flex-col gap-2"></ul>
+                    <a
+                        href="../HongzhengLi.pdf"
+                        data-resume-link="mobile"
+                        class="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary/40 bg-primary/20 px-4 py-3 text-sm font-semibold text-primary-100 transition hover:bg-primary/30">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>下载简历</span>
+                    </a>
+                </div>
+            </nav>
 
-            <section id="course-table"></section>
+            <main class="relative z-10">
+                <section class="mx-auto max-w-6xl px-6 pt-32 pb-12">
+                    <h1 class="text-4xl font-bold text-white sm:text-5xl">
+                        威斯康星大学课程体验
+                    </h1>
+                    <p class="mt-4 max-w-2xl text-lg text-slate-200">
+                        记录在 UW–Madison 修课的真实感受、工作量与亮点。可通过下方表格快速跳转到想看的课程，了解授课风格与项目内容。
+                    </p>
+                </section>
 
-            <section
-                id="course-review-section"
-                class="container mt-5"></section>
-        </section>
+                <section class="mx-auto max-w-6xl space-y-12 px-6 pb-20">
+                    <div id="course-table"></div>
+                    <div
+                        id="course-review-section"
+                        class="mx-auto grid max-w-6xl gap-8"></div>
+                </section>
+            </main>
 
-        <footer class="bg-light text-dark py-3 position-sticky mt-auto">
-            <p class="text-center">
-                感谢您访问我的网站。<br />
-                如有任何问题或建议，请随时<a
-                    href="mailto:hongzheng@cs.wisc.edu"
-                    class="text-decoration-none text-primary fw-bold"
-                    >联系我</a
-                >。
-            </p>
-        </footer>
+            <footer
+                class="border-t border-white/10 bg-slate-950/80 py-10 text-center text-sm text-slate-300">
+                <div class="mx-auto flex max-w-4xl flex-col gap-4 px-6">
+                    <p>如果想了解更多课程细节，欢迎直接联系我。</p>
+                    <p>
+                        邮箱：
+                        <a
+                            href="mailto:hongzheng@cs.wisc.edu"
+                            class="font-semibold text-primary-100 underline decoration-dotted underline-offset-4">
+                            hongzheng@cs.wisc.edu
+                        </a>
+                    </p>
+                </div>
+            </footer>
+        </div>
 
-        <!-- Menu Script -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            // Modified generateMenu function for Chinese version
-            function generateMenu() {
-                fetch("menus.json")
-                    .then((response) => response.json())
-                    .then((data) => {
-                        const menuContainer =
-                            document.getElementById("dynamic-menu");
-                        data.menuItems.forEach((item) => {
-                            const li = document.createElement("li");
-                            li.className = "nav-item";
-
-                            if (item.type === "dropdown") {
-                                li.classList.add("dropdown");
-                                const a = document.createElement("a");
-                                a.className = "nav-link dropdown-toggle";
-                                a.href = "#";
-                                a.id = "navbarDropdown";
-                                a.role = "button";
-                                a.setAttribute("data-bs-toggle", "dropdown");
-                                a.setAttribute("aria-expanded", "false");
-                                a.textContent = item.text;
-
-                                const ul = document.createElement("ul");
-                                ul.className = "dropdown-menu";
-                                ul.setAttribute(
-                                    "aria-labelledby",
-                                    "navbarDropdown",
-                                );
-
-                                item.items.forEach((subItem) => {
-                                    const subLi = document.createElement("li");
-                                    const subA = document.createElement("a");
-                                    subA.className = "dropdown-item";
-                                    subA.href = subItem.href;
-                                    subA.textContent = subItem.text;
-                                    subLi.appendChild(subA);
-                                    ul.appendChild(subLi);
-                                });
-
-                                li.appendChild(a);
-                                li.appendChild(ul);
-                            } else if (item.type === "link") {
-                                const a = document.createElement("a");
-                                a.className = "nav-link";
-                                a.href = item.href;
-                                a.textContent = item.text;
-                                li.appendChild(a);
-                            }
-
-                            menuContainer.appendChild(li);
-                        });
-
-                        // Add language switcher
-                        const languageSwitcher = document.createElement("li");
-                        languageSwitcher.className = "nav-item";
-
-                        const switcherLink = document.createElement("a");
-                        switcherLink.className = "nav-link";
-                        switcherLink.href = "../course-review.html";
-                        switcherLink.textContent = "English";
-                        switcherLink.addEventListener("click", function () {
-                            try {
-                                localStorage.setItem("preferredLanguage", "en");
-                            } catch (e) {
-                                // Silently fail if localStorage unavailable
-                            }
-                        });
-
-                        languageSwitcher.appendChild(switcherLink);
-                        menuContainer.appendChild(languageSwitcher);
-                    });
-            }
-
-            // Initialize menu
-            generateMenu();
-        </script>
-        <script>
-            // Modified course-review.js for Chinese version
-            fetch("courses.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    // Create and add the navigation table
-                    const tableNode = createCourseTable(data.courses);
-                    document
-                        .getElementById("course-table")
-                        .appendChild(tableNode);
-
-                    // Add course reviews
-                    data.courses.forEach((course, index) => {
-                        const courseNode = courseToNode(course, index);
-                        document
-                            .getElementById("course-review-section")
-                            .appendChild(courseNode);
-                    });
-                });
-
-            const defaultDisplayCount = 5;
-
-            function courseToNode(course, index) {
-                const courseNode = document.createElement("div");
-                courseNode.className = "row align-items-start project mb-4";
-                courseNode.id = `course-${index}`;
-
-                // Create image column (left side)
-                const courseImageNode = document.createElement("div");
-                courseImageNode.className = "col-md-4 col-sm-12 mb-3";
-
-                // Create image wrapper for aspect ratio
-                const imageWrapper = document.createElement("div");
-                imageWrapper.className = "position-relative h-100 w-100";
-                imageWrapper.style.minHeight = "200px";
-
-                const courseImage = document.createElement("img");
-                courseImage.src = "../" + course.image;
-                courseImage.className =
-                    "img-fluid rounded w-100 h-100 object-fit-cover";
-                courseImage.style.position = "relative";
-                courseImage.alt = course.course_code;
-
-                imageWrapper.appendChild(courseImage);
-                courseImageNode.appendChild(imageWrapper);
-
-                // Create content column (right side)
-                const contentNode = document.createElement("div");
-                contentNode.className = "col-md-8 col-sm-12";
-
-                const courseTitle = document.createElement("h2");
-                courseTitle.textContent = course.course_code;
-                contentNode.appendChild(courseTitle);
-
-                const newBadgesDivNode = document.createElement("div");
-                newBadgesDivNode.className = "d-flex flex-wrap gap-2 mb-3";
-
-                const courseSemester = document.createElement("p");
-                courseSemester.className = "badge text-bg-secondary m-0";
-                courseSemester.innerText = course.semester;
-                newBadgesDivNode.appendChild(courseSemester);
-
-                const courseHours = document.createElement("p");
-                courseHours.className = "badge text-bg-secondary m-0";
-                courseHours.innerText = "学时: ~" + course.hours + "小时";
-                newBadgesDivNode.appendChild(courseHours);
-
-                if (course.instructor) {
-                    const courseInstructor = document.createElement("p");
-                    courseInstructor.className = "badge text-bg-secondary m-0";
-                    courseInstructor.innerText = "教师: " + course.instructor;
-                    newBadgesDivNode.appendChild(courseInstructor);
-                }
-                contentNode.appendChild(newBadgesDivNode);
-
-                // Render reviews as markdown
-                if (Array.isArray(course.review)) {
-                    course.review.forEach((reviewText) => {
-                        const reviewElem = document.createElement("div");
-                        reviewElem.innerHTML = window.marked
-                            ? marked.parse(reviewText)
-                            : reviewText;
-                        contentNode.appendChild(reviewElem);
-                    });
-                }
-
-                courseNode.appendChild(courseImageNode);
-                courseNode.appendChild(contentNode);
-
-                return courseNode;
-            }
-
-            function createCourseTable(courses) {
-                const tableSection = document.createElement("div");
-                tableSection.className = "container mb-4";
-
-                // Create entries per page selector
-                const selectorWrapper = document.createElement("div");
-                selectorWrapper.className =
-                    "d-flex align-items-center mb-3 gap-2";
-
-                const selectorLabel = document.createElement("label");
-                selectorLabel.textContent = "显示条目: ";
-
-                const selector = document.createElement("select");
-                selector.className = "form-select w-auto";
-                [5, 10, 15, 20, "全部"].forEach((value) => {
-                    const option = document.createElement("option");
-                    option.value = value === "全部" ? courses.length : value;
-                    option.textContent = value;
-                    if (value === defaultDisplayCount) {
-                        option.selected = true;
-                    }
-                    selector.appendChild(option);
-                });
-
-                selectorWrapper.appendChild(selectorLabel);
-                selectorWrapper.appendChild(selector);
-                tableSection.appendChild(selectorWrapper);
-
-                // Create table
-                const table = document.createElement("table");
-                table.className = "table table-hover";
-
-                // Create table header
-                const thead = document.createElement("thead");
-                thead.className = "table-light";
-                const headerRow = document.createElement("tr");
-                ["课程代码", "学期"].forEach((headerText) => {
-                    const th = document.createElement("th");
-                    th.scope = "col";
-                    th.textContent = headerText;
-                    headerRow.appendChild(th);
-                });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                // Create table body
-                const tbody = document.createElement("tbody");
-                table.appendChild(tbody);
-                tableSection.appendChild(table);
-
-                // Create pagination container
-                const paginationContainer = document.createElement("div");
-                paginationContainer.className =
-                    "d-flex justify-content-between align-items-center mt-3";
-
-                const pageInfo = document.createElement("div");
-                paginationContainer.appendChild(pageInfo);
-
-                const pagination = document.createElement("ul");
-                pagination.className = "pagination mb-0";
-                paginationContainer.appendChild(pagination);
-
-                tableSection.appendChild(paginationContainer);
-
-                // Function to update table content
-                function updateTable(entriesPerPage, currentPage = 1) {
-                    // Clear existing tbody
-                    tbody.innerHTML = "";
-
-                    // Calculate start and end indices
-                    const start = (currentPage - 1) * entriesPerPage;
-                    const end = Math.min(
-                        start + entriesPerPage,
-                        courses.length,
-                    );
-
-                    // Update page info text
-                    pageInfo.textContent = `显示第 ${
-                        start + 1
-                    } 到 ${end} 条，共 ${courses.length} 条记录`;
-
-                    // Add rows for current page
-                    for (let i = start; i < end; i++) {
-                        const course = courses[i];
-                        const row = document.createElement("tr");
-                        row.style.cursor = "pointer";
-
-                        row.addEventListener("click", () => {
-                            document
-                                .getElementById(`course-${i}`)
-                                .scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "start",
-                                });
-
-                            const courseElement = document.getElementById(
-                                `course-${i}`,
-                            );
-                            courseElement.style.transition =
-                                "background-color 0.5s";
-                            courseElement.style.backgroundColor = "#fff3cd";
-                            setTimeout(() => {
-                                courseElement.style.backgroundColor = "";
-                            }, 1500);
-                        });
-
-                        const codeCell = document.createElement("td");
-                        codeCell.textContent = course.course_code;
-                        row.appendChild(codeCell);
-
-                        const semesterCell = document.createElement("td");
-                        semesterCell.textContent = course.semester;
-                        row.appendChild(semesterCell);
-
-                        tbody.appendChild(row);
-                    }
-
-                    // Update pagination
-                    pagination.innerHTML = "";
-                    const totalPages = Math.ceil(
-                        courses.length / entriesPerPage,
-                    );
-
-                    if (totalPages > 1) {
-                        // Previous button
-                        const prevLi = document.createElement("li");
-                        prevLi.className = `page-item ${
-                            currentPage === 1 ? "disabled" : ""
-                        }`;
-                        const prevLink = document.createElement("a");
-                        prevLink.className = "page-link";
-                        prevLink.href = "#";
-                        prevLink.textContent = "上一页";
-                        prevLink.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            if (currentPage > 1) {
-                                updateTable(entriesPerPage, currentPage - 1);
-                            }
-                        });
-                        prevLi.appendChild(prevLink);
-                        pagination.appendChild(prevLi);
-
-                        // Page numbers
-                        for (let i = 1; i <= totalPages; i++) {
-                            const li = document.createElement("li");
-                            li.className = `page-item ${
-                                i === currentPage ? "active" : ""
-                            }`;
-                            const link = document.createElement("a");
-                            link.className = "page-link";
-                            link.href = "#";
-                            link.textContent = i;
-                            link.addEventListener("click", (e) => {
-                                e.preventDefault();
-                                updateTable(entriesPerPage, i);
-                            });
-                            li.appendChild(link);
-                            pagination.appendChild(li);
-                        }
-
-                        // Next button
-                        const nextLi = document.createElement("li");
-                        nextLi.className = `page-item ${
-                            currentPage === totalPages ? "disabled" : ""
-                        }`;
-                        const nextLink = document.createElement("a");
-                        nextLink.className = "page-link";
-                        nextLink.href = "#";
-                        nextLink.textContent = "下一页";
-                        nextLink.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            if (currentPage < totalPages) {
-                                updateTable(entriesPerPage, currentPage + 1);
-                            }
-                        });
-                        nextLi.appendChild(nextLink);
-                        pagination.appendChild(nextLi);
-                    }
-                }
-
-                // Add event listener for entries per page selector
-                selector.addEventListener("change", (e) => {
-                    updateTable(parseInt(e.target.value));
-                });
-
-                // Initialize table with default entries per page
-                updateTable(defaultDisplayCount);
-
-                return tableSection;
-            }
-        </script>
+        <script src="../js/language-switcher.js"></script>
+        <script src="../menu.js"></script>
+        <script src="../js/ui.js"></script>
+        <script src="../course-review.js"></script>
+        <script src="../backToTop.js"></script>
     </body>
 </html>

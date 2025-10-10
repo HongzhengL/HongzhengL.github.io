@@ -3,428 +3,814 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hongzheng Li - Personal Website</title>
+        <title>Hongzheng Li — Personal Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                50: "#eef2ff",
+                                100: "#e0e7ff",
+                                200: "#c7d2fe",
+                                300: "#a5b4fc",
+                                400: "#818cf8",
+                                500: "#6366f1",
+                                600: "#4f46e5",
+                                700: "#4338ca",
+                                800: "#3730a3",
+                                900: "#312e81",
+                            },
+                        },
+                        fontFamily: {
+                            sans: [
+                                "Inter",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "-apple-system",
+                                "BlinkMacSystemFont",
+                                "Segoe UI",
+                                "sans-serif",
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
         <link href="styles.css" rel="stylesheet" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     </head>
 
-    <body>
-        <nav
-            class="navbar navbar-expand-lg navbar-light"
-            style="
-                background-color: skyblue;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="/"
-                    >Hongzheng's Homepage</a
-                >
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" id="dynamic-menu">
-                        <!-- Menu items will be dynamically inserted here -->
-                    </ul>
-                </div>
+    <body class="bg-slate-950 font-sans text-slate-100">
+        <div class="relative overflow-hidden">
+            <div
+                class="pointer-events-none fixed inset-0 -z-10 opacity-70"
+                aria-hidden="true">
+                <div
+                    class="absolute left-1/2 top-[-18%] h-[60vh] w-[60vw] -translate-x-1/2 rounded-full bg-primary/30 blur-[140px]"></div>
+                <div
+                    class="absolute right-[-10%] top-1/3 h-[40vh] w-[35vw] rounded-full bg-emerald-400/20 blur-[120px]"></div>
+                <div
+                    class="absolute left-[-10%] bottom-[-10%] h-[45vh] w-[40vw] rounded-full bg-sky-500/20 blur-[140px]"></div>
             </div>
-        </nav>
 
-        <section class="container mt-5">
-            <!-- Header section -->
-            <div class="row mb-5">
-                <div class="col-md-8">
-                    <h1 class="mb-3 text-primary">
-                        <strong>Hongzheng Li</strong>
-                    </h1>
-                    <div class="d-flex flex-wrap gap-3 mb-3">
+            <nav
+                class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+                <div
+                    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                    <a
+                        class="flex items-center gap-3 text-lg font-semibold text-white"
+                        href="/">
                         <span
-                            ><i class="fas fa-phone-alt me-2"></i>(530)
-                            564-2391</span
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-primary/20 text-sm font-bold text-primary-100"
+                            >HL</span
                         >
-                        <span
-                            ><i class="fas fa-envelope me-2"></i
-                            ><a
-                                href="mailto:hongzheng@cs.wisc.edu"
-                                class="text-decoration-none"
-                                >hongzheng@cs.wisc.edu</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fab fa-weixin me-2"></i
-                            ><a
-                                href="#"
-                                class="text-decoration-none"
-                                data-bs-toggle="modal"
-                                data-bs-target="#wechatModal"
-                                >HJKL4WASD</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fab fa-linkedin me-2"></i
-                            ><a
-                                href="https://www.linkedin.com/in/hongzheng-li-uwmadison"
-                                class="text-decoration-none"
-                                >LinkedIn</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fab fa-github me-2"></i
-                            ><a
-                                href="https://github.com/HongzhengL"
-                                class="text-decoration-none"
-                                >GitHub</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fas fa-globe me-2"></i
-                            ><a
-                                href="https://hongzhengli.com"
-                                class="text-decoration-none"
-                                >hongzhengli.com</a
-                            ></span
-                        >
+                        <span class="hidden sm:inline">Hongzheng Li</span>
+                    </a>
+                    <div class="flex items-center gap-3 md:hidden">
+                        <a
+                            href="HongzhengLi.pdf"
+                            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+                            <i class="fa-solid fa-download text-primary-100"></i>
+                            <span>Resume</span>
+                        </a>
+                        <button
+                            id="nav-toggle"
+                            type="button"
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                            aria-controls="mobile-nav"
+                            aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <svg
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    d="M3 5.5A1.5 1.5 0 014.5 4h11a1.5 1.5 0 010 3h-11A1.5 1.5 0 013 5.5zM3 10a1.5 1.5 0 011.5-1.5h11A1.5 1.5 0 0116 10a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 10zm1.5 3.5a1.5 1.5 0 000 3h11a1.5 1.5 0 000-3h-11z" />
+                            </svg>
+                        </button>
                     </div>
-                    <p class="lead">
-                        Computer Science student at UW-Madison with experience
-                        in <em>operating systems</em>,
-                        <em>software development</em>, and research. Skilled in
-                        <em>C/C++</em>, Python, and web technologies with a
-                        focus on <em>performance optimization</em> and
-                        <em>systems programming</em>.
-                    </p>
+                    <ul id="dynamic-menu" class="hidden items-center gap-1 md:flex"></ul>
                     <a
                         href="HongzhengLi.pdf"
-                        class="btn btn-outline-primary mb-3"
-                        >Download Resume</a
-                    >
+                        data-resume-link="desktop"
+                        class="hidden md:inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-2 text-sm font-semibold text-primary-100 transition hover:bg-primary/25">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>Resume</span>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <img
-                        src="assets/images/bucky.png"
-                        alt="Profile Image"
-                        class="img-fluid rounded shadow" />
+                <div
+                    id="mobile-nav"
+                    class="mx-4 mt-3 hidden flex-col gap-4 rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-2xl md:hidden">
+                    <ul id="dynamic-menu-mobile" class="flex flex-col gap-2"></ul>
+                    <a
+                        href="HongzhengLi.pdf"
+                        data-resume-link="mobile"
+                        class="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary/40 bg-primary/20 px-4 py-3 text-sm font-semibold text-primary-100 transition hover:bg-primary/30">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>Resume</span>
+                    </a>
                 </div>
-            </div>
+            </nav>
 
-            <!-- Education Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-graduation-cap me-2"></i>Education
-                </h2>
-                <div class="row align-items-center education-entry">
-                    <div class="col-3 col-md-2 education-emblem-wrapper mb-3 mb-md-0">
-                        <img src="assets/images/cmu-wordmark.png" class="education-emblem" alt="Carnegie Mellon University emblem" />
-                    </div>
-                    <div class="col-9 col-md-6 col-lg-6 education-details d-flex flex-column">
-                        <h4>Carnegie Mellon University</h4>
-                        <p><em>Master of Science in Information Networking</em></p>
-                    </div>
-                    <div class="col-12 col-md-4 education-meta mt-2 mt-md-0 text-md-end">
-                        <p>Pittsburgh, PA</p>
-                        <p>January 2026 - May 2027</p>
-                    </div>
-                </div>
-                <div class="row align-items-center education-entry">
-                    <div class="col-3 col-md-2 education-emblem-wrapper mb-3 mb-md-0">
-                        <img src="assets/images/uw-crest.svg" class="education-emblem" alt="University of Wisconsin-Madison emblem" />
-                    </div>
-                    <div class="col-9 col-md-6 col-lg-6 education-details d-flex flex-column">
-                        <h4>University of Wisconsin - Madison</h4>
-                        <p><em>Bachelor of Science in Computer Science</em></p>
-                        <p><strong>GPA:</strong> 4.0/4.0</p>
-                    </div>
-                    <div class="col-12 col-md-4 education-meta mt-2 mt-md-0 text-md-end">
-                        <p>Madison, WI</p>
-                        <p>September 2021 - December 2025</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Technical Skills Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-laptop-code me-2"></i>Technical Skills
-                </h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>
-                            <strong>Programming Languages:</strong>
-                            <em>C, C++</em>, Python, JavaScript, Java, HTML, CSS
+            <main class="relative z-10">
+                <section
+                    class="mx-auto flex max-w-6xl flex-col gap-10 px-6 pt-32 pb-16 lg:flex-row lg:items-center">
+                    <div class="flex-1 space-y-8">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-slate-200">
+                            System Enthusiast · Full-Stack Developer
+                        </span>
+                        <h1
+                            class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                            Building resilient software with a systems mindset.
+                        </h1>
+                        <p class="max-w-2xl text-lg leading-relaxed text-slate-200">
+                            I'm a computer science student and CS 571 peer mentor at UW-Madison,
+                            building AI-powered applications, performant systems, and the tooling
+                            that keeps teams shipping with confidence. I love shaping vague ideas
+                            into production-ready experiences and documenting the path for others
+                            to follow.
                         </p>
-                        <p>
-                            <strong>Tools:</strong> Git, GitHub Actions,
-                            <em>Docker</em>, Vim, <em>CMake, GDB</em>, vcpkg,
-                            Figma, Google Test Suite, UML, JUnit
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            <strong>Databases & Distributed Systems:</strong>
-                            PostgreSQL, Cassandra, <em>HDFS, Spark, Kafka</em>
-                        </p>
-                        <p>
-                            <strong>Frameworks & Libraries:</strong> React,
-                            React Native, <em>gRPC</em>, Flask, OpenMP, PyTorch,
-                            pandas, NumPy, Matplotlib
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-briefcase me-2"></i>Experience
-                </h2>
-
-                <!-- Experience 1 -->
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h4>Operating System Research Intern</h4>
-                        <p class="mb-1">University of California, Merced</p>
-                        <ul>
-                            <li>
-                                Contributed to the development of a
-                                <em>performance optimization tool</em> for
-                                multi-node systems using C++
-                            </li>
-                            <li>
-                                <em>Modified Linux kernel code</em> to simulate
-                                a memory-tiered architecture on a multi-node
-                                machine
-                            </li>
-                            <li>
-                                Utilized Linux Performance Tools, including
-                                <em>Perf and VTune</em>, to monitor and analyze
-                                system performance
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>Remote</p>
-                        <p>April 2024 - February 2025</p>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h4>Research Assistant</h4>
-                        <p class="mb-1">
-                            Hong Kong University of Science and Technology
-                        </p>
-                        <ul>
-                            <li>
-                                Analyzed trends and user engagement on North
-                                American short video platforms
-                            </li>
-                            <li>
-                                Examined content strategies and algorithmic
-                                recommendations
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>Clear Water Bay, Hong Kong</p>
-                        <p>October 2024 - February 2025</p>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>Systems and Software Intern</h4>
-                        <p class="mb-1">Emerson Process Management Co. Ltd.</p>
-                        <ul>
-                            <li>
-                                Assisted engineers in identifying, correcting,
-                                and designing engineering graphs
-                            </li>
-                            <li>
-                                Supported engineers in streamlining document
-                                collection workflows and optimizing daily
-                                staffing operations
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>Shanghai, China</p>
-                        <p>June 2024 - July 2024</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Featured Projects Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-code-branch me-2"></i>Featured Projects
-                </h2>
-
-                <!-- Project 1 -->
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h4>GOPHER Delivery Simulation System</h4>
-                        <p class="mb-1">
-                            <strong>Technologies:</strong> C++, TypeScript,
-                            Docker, Git
-                        </p>
-                        <ul>
-                            <li>
-                                Built a multi-entity simulator in C++ using
-                                <em>Composite Factory</em>
-                            </li>
-                            <li>
-                                Extended functionality of entities using the
-                                <em>Decorator pattern</em>
-                            </li>
-                            <li>
-                                Implemented the <em>Observer pattern</em> for
-                                real-time notifications, sending JSON events to
-                                TypeScript front end
-                            </li>
-                            <li>
-                                Containerized the environment with Docker for
-                                uniform builds and deployments
-                            </li>
-                        </ul>
-                        <a
-                            href="https://drone.hongzhengli.com"
-                            class="btn btn-outline-primary btn-sm me-2"
-                            >View Demo</a
-                        >
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>February 2024 - May 2024</p>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>BusTub DBMS Buffer Pool Manager</h4>
-                        <p class="mb-1">
-                            <strong>Technologies:</strong> C++, Git
-                        </p>
-                        <ul>
-                            <li>
-                                Built a
-                                <em>thread-safe Buffer Pool Manager</em> for
-                                efficient memory-disk page management
-                            </li>
-                            <li>
-                                Implemented the <em>LRU-K algorithm</em> to
-                                optimize page eviction
-                            </li>
-                            <li>
-                                Designed a Disk Scheduler for
-                                <em>asynchronous I/O</em>, improving read/write
-                                efficiency
-                            </li>
-                            <li>
-                                Applied
-                                <em
-                                    >synchronization and fine-grained
-                                    latches</em
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200">
+                                <i class="fa-solid fa-phone text-primary-200"></i>
+                                <span>(530) 564-2391</span>
+                            </div>
+                            <a
+                                href="mailto:hongzheng@cs.wisc.edu"
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/10">
+                                <i class="fa-solid fa-envelope text-primary-200"></i>
+                                <span>hongzheng@cs.wisc.edu</span>
+                            </a>
+                            <button
+                                type="button"
+                                data-modal-target="wechat-modal"
+                                class="flex items-center gap-3 rounded-2xl border border-emerald-300/40 bg-emerald-400/10 px-4 py-3 text-left text-sm font-medium text-emerald-100 transition hover:bg-emerald-400/20">
+                                <i class="fa-brands fa-weixin text-emerald-300"></i>
+                                <span>WeChat · HJKL4WASD</span>
+                            </button>
+                            <div
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200">
+                                <i class="fa-solid fa-globe text-primary-200"></i>
+                                <a
+                                    href="https://hongzhengli.com"
+                                    class="truncate text-primary-100 underline decoration-dotted underline-offset-4"
+                                    >hongzhengli.com</a
                                 >
-                                to enhance concurrency
+                            </div>
+                            <a
+                                href="https://www.linkedin.com/in/hongzheng-li-uwmadison"
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/10">
+                                <i class="fa-brands fa-linkedin text-primary-200"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a
+                                href="https://github.com/HongzhengL"
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/10">
+                                <i class="fa-brands fa-github text-primary-200"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a
+                                href="HongzhengLi.pdf"
+                                class="inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary/20 px-6 py-3 text-base font-semibold text-primary-50 transition hover:bg-primary/25">
+                                <i class="fa-solid fa-file-arrow-down text-primary-100"></i>
+                                <span>Download Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-1 justify-center lg:justify-end">
+                        <div class="relative w-full max-w-sm">
+                            <div
+                                class="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-primary/40 via-indigo-500/40 to-sky-400/50 opacity-70 blur-3xl"></div>
+                            <div
+                                class="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/70 p-8 shadow-[0_45px_90px_-50px_rgba(99,102,241,0.8)]">
+                                <img
+                                    src="assets/images/bucky.png"
+                                    alt="Hongzheng Li"
+                                    class="mx-auto h-64 w-64 object-contain drop-shadow-[0_25px_45px_rgba(79,70,229,0.55)]" />
+                                <div class="mt-6 space-y-3 text-sm text-slate-200">
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary-100">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </span>
+                                        <div>
+                                            <p class="text-xs uppercase tracking-widest text-slate-400">
+                                                Based in
+                                            </p>
+                                            <p class="text-base font-semibold text-white">
+                                                Madison, Wisconsin
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary-100">
+                                            <i class="fa-solid fa-microchip"></i>
+                                        </span>
+                                        <div>
+                                            <p class="text-xs uppercase tracking-widest text-slate-400">
+                                                Focus Areas
+                                            </p>
+                                            <p class="text-base font-semibold text-white">
+                                                Systems · Software Engineering
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mx-auto max-w-6xl space-y-12 px-6 pb-20">
+                    <section class="space-y-6">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                            <h2 class="text-3xl font-semibold text-white">
+                                Education
+                            </h2>
+                            <p class="text-sm text-slate-300">
+                                A pipeline shaped by rigorous engineering and research.
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <article
+                                class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 md:flex-row md:items-center md:justify-between">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-white/5">
+                                        <img
+                                            src="assets/images/cmu-wordmark.png"
+                                            alt="Carnegie Mellon University logo"
+                                            class="h-12 object-contain" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white">
+                                            Carnegie Mellon University
+                                        </h3>
+                                        <p class="text-sm text-slate-300">
+                                            Master of Science in Information Networking
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-slate-300 md:text-right">
+                                    <p>Pittsburgh, PA</p>
+                                    <p>January 2026 - May 2027</p>
+                                </div>
+                            </article>
+                            <article
+                                class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 md:flex-row md:items-center md:justify-between">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-white/5">
+                                        <img
+                                            src="assets/images/uw-crest.svg"
+                                            alt="University of Wisconsin-Madison crest"
+                                            class="h-12 object-contain" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white">
+                                            University of Wisconsin-Madison
+                                        </h3>
+                                        <p class="text-sm text-slate-300">
+                                            Bachelor of Science in Computer Science
+                                        </p>
+                                        <p class="mt-1 text-sm text-slate-400">
+                                            GPA 4.0 / 4.0
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-slate-300 md:text-right">
+                                    <p>Madison, WI</p>
+                                    <p>September 2021 - December 2025</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+                        <div class="space-y-6">
+                            <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                                <h2 class="text-3xl font-semibold text-white">
+                                    Experience
+                                </h2>
+                                <p class="text-sm text-slate-300">
+                                    Teaching, shipping AI-driven products, and hardening operating systems.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                CS 571 Peer Mentor
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                University of Wisconsin-Madison · Dept. of Computer Sciences
+                                            </p>
+                                            <p class="text-sm text-slate-400">Madison, WI</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            September 2025 - Present
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Host weekly office hours for 300+ students, coaching on programming assignments,
+                                                debugging strategies, and project design trade-offs.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Partner with instructors to triage common pain points, author FAQ updates,
+                                                and tighten handoff between lecture content and project specs.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                Full-Stack Developer
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                UW-Madison CDIS Summer AI Lab
+                                            </p>
+                                            <p class="text-sm text-slate-400">Madison, WI</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            June 2025 - August 2025
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Built a chat-based travel planner that combines OpenAI intent extraction with
+                                                real-time flight, hotel, and venue APIs to deliver trustworthy itineraries.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Normalized SerpAPI, Amadeus, and Google Maps data into reusable booking cards
+                                                and surfaced transparent sourcing inside the UI.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Led production deployment and CI/CD automation, standardizing Prettier, ESLint,
+                                                Devcontainer, and pre-commit to keep the team in sync.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                Operating System Research Intern
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                University of California, Merced
+                                            </p>
+                                            <p class="text-sm text-slate-400">Remote</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            April 2024 - February 2025
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Developed a performance optimization toolkit for multi-node systems in C++,
+                                                exposing actionable profiling dashboards for the research team.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Prototyped memory-tiered architectures by modifying Linux kernel pathways and
+                                                validating behavior in simulated multi-node deployments.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Instrumented Perf and VTune workflows to isolate regressions and document the
+                                                tuning playbook for future contributors.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                Research Assistant
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                Hong Kong University of Science and Technology
+                                            </p>
+                                            <p class="text-sm text-slate-400">Clear Water Bay, Hong Kong</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            October 2024 - February 2025
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Analyzed growth patterns and user engagement across North American short video platforms.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Investigated algorithmic recommendations to inform content strategy insights.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                Systems & Software Intern
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                Emerson Process Management Co. Ltd.
+                                            </p>
+                                            <p class="text-sm text-slate-400">Shanghai, China</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            June 2024 - July 2024
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Assisted engineers in designing and refining complex process flow diagrams.
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                Improved documentation workflows and daily staffing operations through lightweight tooling.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                                <h2 class="text-3xl font-semibold text-white">
+                                    Technical Skills
+                                </h2>
+                                <p class="text-sm text-slate-300">
+                                    Tools, languages, and frameworks that enable rapid iteration.
+                                </p>
+                            </div>
+                            <div class="space-y-5">
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        Languages
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        <strong class="text-white">C · C++</strong>, Python,
+                                        JavaScript, Java, HTML, CSS
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        Tools & Platforms
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        Git, GitHub Actions,
+                                        <strong class="text-white">Docker</strong>, Vim,
+                                        <strong class="text-white">CMake · GDB</strong>, vcpkg,
+                                        Figma, Google Test, UML, JUnit
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        Distributed & Data
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        PostgreSQL, Cassandra,
+                                        <strong class="text-white">HDFS · Spark · Kafka</strong>
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        Frameworks & Libraries
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        React, React Native, <strong class="text-white">gRPC</strong>,
+                                        Flask, OpenMP, PyTorch, pandas, NumPy, Matplotlib
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="space-y-6">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                            <h2 class="text-3xl font-semibold text-white">
+                                Featured Projects
+                            </h2>
+                            <p class="text-sm text-slate-300">
+                                Experiments that blend systems thinking with polished UX.
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <article
+                                class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white">
+                                            Non-Linear Chatbot
+                                        </h3>
+                                        <p class="mt-2 text-sm text-slate-300">
+                                            React · Node.js · TypeScript · PostgreSQL · Prisma
+                                        </p>
+                                    </div>
+                                    <p class="text-sm text-slate-400 sm:text-right">August 2025</p>
+                                </div>
+                                <ul class="space-y-3 text-slate-200">
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Designed a tree-based conversation model with ReactFlow and Dagre so users can branch,
+                                            backtrack, and intuitively explore complex threads.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Built full-stack flows with Wasp, PostgreSQL, and REST APIs to handle authentication,
+                                            persistence, and real-time streaming responses.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Hardened security with JWT auth, rate limiting, layered validation, and XSS protection.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Deployed with Docker and GitHub Actions to keep CI/CD fully automated.
+                                        </span>
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://chat.hongzhengli.com"
+                                    class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-50 transition hover:bg-primary/25">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>View Demo</span>
+                                </a>
+                            </article>
+                            <article
+                                class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white">
+                                            BusTub DBMS Buffer Pool Manager
+                                        </h3>
+                                        <p class="mt-2 text-sm text-slate-300">C++ · CMake · Ninja · Git</p>
+                                    </div>
+                                    <p class="text-sm text-slate-400 sm:text-right">
+                                        May 2025
+                                    </p>
+                                </div>
+                                <ul class="space-y-3 text-slate-200">
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Built core DBMS infrastructure—buffer pool manager and B+Tree index—inside a 30K+ LOC C++17 codebase.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Engineered thread-safe memory management, LRU-K eviction, and concurrent indexing to keep workloads responsive.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Implemented advanced concurrency controls (RAII, page guards, latch crabbing) for predictable multi-threaded access.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Tuned lock-free queues and asynchronous disk I/O, achieving 8.3K QPS (scan) and 5.7K QPS (get) at 1 ms disk latency.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article
+                                class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white">
+                                            GOPHER Delivery Simulation System
+                                        </h3>
+                                        <p class="mt-2 text-sm text-slate-300">
+                                            C++ · TypeScript · Docker · Git
+                                        </p>
+                                    </div>
+                                    <p class="text-sm text-slate-400 sm:text-right">May 2024</p>
+                                </div>
+                                <ul class="space-y-3 text-slate-200">
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Built a multi-entity simulator in C++, wiring Decorator and Observer patterns to stream
+                                            real-time updates to a TypeScript dashboard.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Documented the codebase with Doxygen and backed critical paths with Google Test suites.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Containerized the project with Docker and wired CI/CD to automate validation and releases.
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            Practiced Scrum and Git-based collaboration to keep the team shipping on schedule.
+                                        </span>
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://drone.hongzhengli.com"
+                                    class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-50 transition hover:bg-primary/25">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>View Demo</span>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="space-y-6">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                            <h2 class="text-3xl font-semibold text-white">
+                                Honors & Recognition
+                            </h2>
+                            <p class="text-sm text-slate-300">
+                                Celebrating milestones earned along the way.
+                            </p>
+                        </div>
+                        <ul
+                            class="grid gap-3 rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-black/20 sm:grid-cols-2">
+                            <li class="text-sm text-slate-100">
+                                <strong class="text-white">Dean's List</strong>, UW-Madison,
+                                College of Letters & Science · Fall 2024
+                            </li>
+                            <li class="text-sm text-slate-100">
+                                <strong class="text-white">Dean's List</strong>, UMN, College of
+                                Science and Engineering · Fall 2023 & Spring 2024
+                            </li>
+                            <li class="text-sm text-slate-100">
+                                Lifetime Member, Tau Sigma National Honor Society · UMN Chapter
+                            </li>
+                            <li class="text-sm text-slate-100">
+                                Academic Perfection, UC Davis Global Study Program · 2023-2024
                             </li>
                         </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>December 2024</p>
-                    </div>
+                    </section>
+                </section>
+            </main>
+
+            <footer
+                class="border-t border-white/10 bg-slate-950/80 py-10 text-center text-sm text-slate-300">
+                <div class="mx-auto flex max-w-4xl flex-col gap-4 px-6">
+                    <p>Thanks for stopping by — let's build something meaningful.</p>
+                    <p>
+                        Reach out at
+                        <a
+                            href="mailto:hongzheng@cs.wisc.edu"
+                            class="font-semibold text-primary-100 underline decoration-dotted underline-offset-4">
+                            hongzheng@cs.wisc.edu
+                        </a>
+                        for collaborations or questions.
+                    </p>
                 </div>
-            </div>
+            </footer>
+        </div>
 
-            <!-- Honors Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4"><i class="fas fa-award me-2"></i>Honors</h2>
-                <ul>
-                    <li>
-                        Dean's List, UW-Madison, College of Letter & Science,
-                        Fall 2024
-                    </li>
-                    <li>
-                        Dean's List, UMN, College of Science and Engineering,
-                        Fall 2023, Spring 2024
-                    </li>
-                    <li>
-                        Lifetime Member, UMN Chapter, Tau Sigma National Honor
-                        Society
-                    </li>
-                    <li>
-                        Academic Perfection, University of California, Davis
-                        Global Study Program, 2023 - 2024
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <footer class="bg-light text-dark py-3 position-sticky mt-auto">
-            <p class="text-center">
-                Thank you for visiting my website.<br />
-                Feel free to
-                <a
-                    href="mailto:hongzheng@cs.wisc.edu"
-                    class="text-decoration-none text-primary fw-bold"
-                    >contact me</a
-                >
-                with any questions or feedback.
-            </p>
-        </footer>
-
-        <!-- WeChat QR Code Modal -->
         <div
-            class="modal fade"
-            id="wechatModal"
-            tabindex="-1"
-            aria-labelledby="wechatModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="wechatModalLabel">
-                            <i class="fab fa-weixin me-2"></i>WeChat QR Code
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img
-                            src="assets/images/wechat_qr_code.JPG"
-                            alt="WeChat QR Code"
-                            class="img-fluid rounded shadow"
-                            style="max-width: 300px" />
-                        <p class="mt-3 text-muted">Scan to add me on WeChat</p>
-                        <p class="fw-bold">WeChat ID: HJKL4WASD</p>
-                    </div>
-                </div>
+            id="wechat-modal"
+            data-modal
+            class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/80 px-6 backdrop-blur"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true">
+            <div
+                class="relative w-full max-w-sm rounded-3xl border border-white/10 bg-slate-900/90 p-6 shadow-2xl shadow-primary/20">
+                <button
+                    type="button"
+                    class="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-slate-300 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                    data-modal-close="wechat-modal"
+                    aria-label="Close modal">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <h3 class="mb-4 text-lg font-semibold text-white">
+                    <i class="fa-brands fa-weixin text-emerald-300"></i>
+                    <span class="ml-2 align-middle">WeChat QR Code</span>
+                </h3>
+                <img
+                    src="assets/images/wechat_qr_code.JPG"
+                    alt="WeChat QR Code"
+                    class="w-full rounded-2xl border border-white/10 object-cover"
+                    data-modal-focus />
+                <p class="mt-4 text-center text-sm text-slate-300">
+                    Scan to add me on WeChat
+                </p>
+                <p class="text-center text-sm font-semibold text-white">
+                    WeChat ID: HJKL4WASD
+                </p>
             </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="js/language-switcher.js"></script>
+        <script src="menu.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="backToTop.js"></script>
         <script
             type="text/javascript"
             id="clustrmaps"
             src="//clustrmaps.com/map_v2.js?d=W6a7uV84kzU_AHR0tXCbbUt6VRGfPUPQ0pzEQBeRKwg&cl=000000&w=0&t=n&co=e9ecef&cmo=f58025"></script>
-        <!-- Menu Script -->
-        <script src="menu.js"></script>
-        <script src="js/language-switcher.js"></script>
-        <script src="backToTop.js"></script>
     </body>
 </html>

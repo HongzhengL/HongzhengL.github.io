@@ -3,453 +3,785 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>李弘政 - 个人网站</title>
+        <title>李弘政 — 个人网站</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" />
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                50: "#eef2ff",
+                                100: "#e0e7ff",
+                                200: "#c7d2fe",
+                                300: "#a5b4fc",
+                                400: "#818cf8",
+                                500: "#6366f1",
+                                600: "#4f46e5",
+                                700: "#4338ca",
+                                800: "#3730a3",
+                                900: "#312e81",
+                            },
+                        },
+                        fontFamily: {
+                            sans: [
+                                "Inter",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "-apple-system",
+                                "BlinkMacSystemFont",
+                                "Segoe UI",
+                                "sans-serif",
+                            ],
+                        },
+                    },
+                },
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
         <link href="../styles.css" rel="stylesheet" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     </head>
 
-    <body>
-        <nav
-            class="navbar navbar-expand-lg navbar-light"
-            style="
-                background-color: skyblue;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="/">李弘政的主页</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto" id="dynamic-menu">
-                        <!-- Menu items will be dynamically inserted here -->
-                    </ul>
-                </div>
+    <body class="bg-slate-950 font-sans text-slate-100">
+        <div class="relative overflow-hidden">
+            <div
+                class="pointer-events-none fixed inset-0 -z-10 opacity-70"
+                aria-hidden="true">
+                <div
+                    class="absolute left-1/2 top-[-18%] h-[60vh] w-[60vw] -translate-x-1/2 rounded-full bg-primary/30 blur-[140px]"></div>
+                <div
+                    class="absolute right-[-10%] top-1/3 h-[40vh] w-[35vw] rounded-full bg-emerald-400/20 blur-[120px]"></div>
+                <div
+                    class="absolute left-[-10%] bottom-[-10%] h-[45vh] w-[40vw] rounded-full bg-sky-500/20 blur-[140px]"></div>
             </div>
-        </nav>
 
-        <section class="container mt-5">
-            <!-- Header section -->
-            <div class="row mb-5">
-                <div class="col-md-8">
-                    <h1 class="mb-3 text-primary"><strong>李弘政</strong></h1>
-                    <div class="d-flex flex-wrap gap-3 mb-3">
+            <nav
+                class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+                <div
+                    class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                    <a
+                        class="flex items-center gap-3 text-lg font-semibold text-white"
+                        href="/zh/index.html">
                         <span
-                            ><i class="fas fa-phone-alt me-2"></i>(530)
-                            564-2391</span
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-primary/20 text-sm font-bold text-primary-100"
+                            >HL</span
                         >
-                        <span
-                            ><i class="fas fa-envelope me-2"></i
-                            ><a
-                                href="mailto:hongzheng@cs.wisc.edu"
-                                class="text-decoration-none"
-                                >hongzheng@cs.wisc.edu</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fab fa-weixin me-2"></i
-                            ><a
-                                href="#"
-                                class="text-decoration-none"
-                                data-bs-toggle="modal"
-                                data-bs-target="#wechatModal"
-                                >HJKL4WASD</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fab fa-linkedin me-2"></i
-                            ><a
-                                href="https://www.linkedin.com/in/hongzheng-li-uwmadison"
-                                class="text-decoration-none"
-                                >LinkedIn</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fab fa-github me-2"></i
-                            ><a
-                                href="https://github.com/HongzhengL"
-                                class="text-decoration-none"
-                                >GitHub</a
-                            ></span
-                        >
-                        <span
-                            ><i class="fas fa-globe me-2"></i
-                            ><a
-                                href="https://hongzhengli.com"
-                                class="text-decoration-none"
-                                >hongzhengli.com</a
-                            ></span
-                        >
+                        <span class="hidden sm:inline">李弘政的主页</span>
+                    </a>
+                    <div class="flex items-center gap-3 md:hidden">
+                        <a
+                            href="../HongzhengLi.pdf"
+                            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+                            <i class="fa-solid fa-download text-primary-100"></i>
+                            <span>下载简历</span>
+                        </a>
+                        <button
+                            id="nav-toggle"
+                            type="button"
+                            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                            aria-controls="mobile-nav"
+                            aria-expanded="false">
+                            <span class="sr-only">展开导航</span>
+                            <svg
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    d="M3 5.5A1.5 1.5 0 014.5 4h11a1.5 1.5 0 010 3h-11A1.5 1.5 0 013 5.5zM3 10a1.5 1.5 0 011.5-1.5h11A1.5 1.5 0 0116 10a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 10zm1.5 3.5a1.5 1.5 0 000 3h11a1.5 1.5 0 000-3h-11z" />
+                            </svg>
+                        </button>
                     </div>
-                    <p class="lead">
-                        威斯康星大学麦迪逊分校计算机科学专业学生，长期深耕<em>操作系统</em>、<em>软件工程</em>与科研合作。
-                        熟练掌握<em>C/C++</em>、Python 及 Web
-                        技术，聚焦<em>性能优化</em>与<em>系统编程</em>的实际落地。
-                    </p>
+                    <ul id="dynamic-menu" class="hidden items-center gap-1 md:flex"></ul>
                     <a
                         href="../HongzhengLi.pdf"
-                        class="btn btn-outline-primary mb-3"
-                        >下载简历</a
-                    >
+                        data-resume-link="desktop"
+                        class="hidden md:inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-2 text-sm font-semibold text-primary-100 transition hover:bg-primary/25">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>下载简历</span>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <img
-                        src="../assets/images/bucky.png"
-                        alt="Profile Image"
-                        class="img-fluid rounded shadow" />
+                <div
+                    id="mobile-nav"
+                    class="mx-4 mt-3 hidden flex-col gap-4 rounded-3xl border border-white/10 bg-slate-950/95 p-4 shadow-2xl md:hidden">
+                    <ul id="dynamic-menu-mobile" class="flex flex-col gap-2"></ul>
+                    <a
+                        href="../HongzhengLi.pdf"
+                        data-resume-link="mobile"
+                        class="inline-flex items-center justify-center gap-2 rounded-2xl border border-primary/40 bg-primary/20 px-4 py-3 text-sm font-semibold text-primary-100 transition hover:bg-primary/30">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>下载简历</span>
+                    </a>
                 </div>
-            </div>
+            </nav>
 
-            <!-- Education Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-graduation-cap me-2"></i>教育背景
-                </h2>
-                <div class="row align-items-center education-entry">
-                    <div class="col-3 col-md-2 education-emblem-wrapper mb-3 mb-md-0">
-                        <img src="../assets/images/cmu-wordmark.png" class="education-emblem" alt="卡内基梅隆大学校徽" />
+            <main class="relative z-10">
+                <section
+                    class="mx-auto flex max-w-6xl flex-col gap-10 px-6 pt-32 pb-16 lg:flex-row lg:items-center">
+                    <div class="flex-1 space-y-8">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-slate-200">
+                            系统爱好者 · 全栈开发
+                        </span>
+                        <h1
+                            class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                            以系统视角，构建经得起考验的软件。
+                        </h1>
+                        <p class="max-w-2xl text-lg leading-relaxed text-slate-200">
+                            我目前在威斯康星大学麦迪逊分校攻读计算机科学，并担任 CS 571 课程导师，专注于打造 AI 驱动的应用、
+                            高性能系统与团队工具链。我喜欢把模糊的想法磨成可上线的体验，并把解决方案沉淀成文档，方便下一位同伴接棒。
+                        </p>
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200">
+                                <i class="fa-solid fa-phone text-primary-200"></i>
+                                <span>(530) 564-2391</span>
+                            </div>
+                            <a
+                                href="mailto:hongzheng@cs.wisc.edu"
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/10">
+                                <i class="fa-solid fa-envelope text-primary-200"></i>
+                                <span>hongzheng@cs.wisc.edu</span>
+                            </a>
+                            <button
+                                type="button"
+                                data-modal-target="wechat-modal"
+                                class="flex items-center gap-3 rounded-2xl border border-emerald-300/40 bg-emerald-400/10 px-4 py-3 text-left text-sm font-medium text-emerald-100 transition hover:bg-emerald-400/20">
+                                <i class="fa-brands fa-weixin text-emerald-300"></i>
+                                <span>微信 · HJKL4WASD</span>
+                            </button>
+                            <div
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200">
+                                <i class="fa-solid fa-globe text-primary-200"></i>
+                                <a
+                                    href="https://hongzhengli.com"
+                                    class="truncate text-primary-100 underline decoration-dotted underline-offset-4"
+                                    >hongzhengli.com</a
+                                >
+                            </div>
+                            <a
+                                href="https://www.linkedin.com/in/hongzheng-li-uwmadison"
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/10">
+                                <i class="fa-brands fa-linkedin text-primary-200"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a
+                                href="https://github.com/HongzhengL"
+                                class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/10">
+                                <i class="fa-brands fa-github text-primary-200"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a
+                                href="../HongzhengLi.pdf"
+                                class="inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary/20 px-6 py-3 text-base font-semibold text-primary-50 transition hover:bg-primary/25">
+                                <i class="fa-solid fa-file-arrow-down text-primary-100"></i>
+                                <span>下载我的简历</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-9 col-md-6 col-lg-6 education-details d-flex flex-column">
-                        <h4>卡内基梅隆大学</h4>
-                        <p><em>信息网络理学硕士</em></p>
+                    <div class="flex flex-1 justify-center lg:justify-end">
+                        <div class="relative w-full max-w-sm">
+                            <div
+                                class="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-primary/40 via-indigo-500/40 to-sky-400/50 opacity-70 blur-3xl"></div>
+                            <div
+                                class="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/70 p-8 shadow-[0_45px_90px_-50px_rgba(99,102,241,0.8)]">
+                                <img
+                                    src="../assets/images/bucky.png"
+                                    alt="李弘政"
+                                    class="mx-auto h-64 w-64 object-contain drop-shadow-[0_25px_45px_rgba(79,70,229,0.55)]" />
+                                <div class="mt-6 space-y-3 text-sm text-slate-200">
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary-100">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </span>
+                                        <div>
+                                            <p class="text-xs uppercase tracking-widest text-slate-400">
+                                                常驻城市
+                                            </p>
+                                            <p class="text-base font-semibold text-white">
+                                                威斯康星州麦迪逊
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span
+                                            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary-100">
+                                            <i class="fa-solid fa-microchip"></i>
+                                        </span>
+                                        <div>
+                                            <p class="text-xs uppercase tracking-widest text-slate-400">
+                                                核心方向
+                                            </p>
+                                            <p class="text-base font-semibold text-white">
+                                                系统 · 软件工程
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-4 education-meta mt-2 mt-md-0 text-md-end">
-                        <p>宾夕法尼亚州匹兹堡市</p>
-                        <p>2026年1月 - 2027年5月</p>
-                    </div>
-                </div>
-                <div class="row align-items-center education-entry">
-                    <div class="col-3 col-md-2 education-emblem-wrapper mb-3 mb-md-0">
-                        <img src="../assets/images/uw-crest.svg" class="education-emblem" alt="威斯康星大学麦迪逊分校校徽" />
-                    </div>
-                    <div class="col-9 col-md-6 col-lg-6 education-details d-flex flex-column">
-                        <h4>威斯康星大学麦迪逊分校</h4>
-                        <p><em>计算机科学理学学士</em></p>
-                        <p><strong>GPA:</strong> 4.0/4.0</p>
-                    </div>
-                    <div class="col-12 col-md-4 education-meta mt-2 mt-md-0 text-md-end">
-                        <p>威斯康星州麦迪逊市</p>
-                        <p>2021年9月 - 2025年12月</p>
-                    </div>
-                </div>
-            </div>
+                </section>
 
-            <!-- Technical Skills Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-laptop-code me-2"></i>技术技能
-                </h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>
-                            <strong>编程语言：</strong> <em>C, C++</em>, Python,
-                            JavaScript, Java, HTML, CSS
-                        </p>
-                        <p>
-                            <strong>开发工具：</strong> Git, GitHub Actions,
-                            <em>Docker</em>, Vim, <em>CMake, GDB</em>, vcpkg,
-                            Figma, Google Test Suite, UML, JUnit
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            <strong>数据库与分布式系统：</strong> PostgreSQL,
-                            Cassandra, <em>HDFS, Spark, Kafka</em>
-                        </p>
-                        <p>
-                            <strong>框架与库：</strong> React, React Native,
-                            <em>gRPC</em>, Flask, OpenMP, PyTorch, pandas,
-                            NumPy, Matplotlib
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <section class="mx-auto max-w-6xl space-y-12 px-6 pb-20">
+                    <section class="space-y-6">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                            <h2 class="text-3xl font-semibold text-white">教育背景</h2>
+                            <p class="text-sm text-slate-300">
+                                成长路径由严谨的工程实践与科研探索共同塑造。
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <article
+                                class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 md:flex-row md:items-center md:justify-between">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-white/5">
+                                        <img
+                                            src="../assets/images/cmu-wordmark.png"
+                                            alt="卡内基梅隆大学标志"
+                                            class="h-12 object-contain" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white">
+                                            卡内基梅隆大学
+                                        </h3>
+                                        <p class="text-sm text-slate-300">
+                                            信息网络理学硕士
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-slate-300 md:text-right">
+                                    <p>宾夕法尼亚州匹兹堡</p>
+                                    <p>2026 年 1 月 - 2027 年 5 月</p>
+                                </div>
+                            </article>
+                            <article
+                                class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 md:flex-row md:items-center md:justify-between">
+                                <div class="flex items-center gap-5">
+                                    <div
+                                        class="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-white/5">
+                                        <img
+                                            src="../assets/images/uw-crest.svg"
+                                            alt="威斯康星大学麦迪逊分校校徽"
+                                            class="h-12 object-contain" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white">
+                                            威斯康星大学麦迪逊分校
+                                        </h3>
+                                        <p class="text-sm text-slate-300">
+                                            计算机科学理学学士
+                                        </p>
+                                        <p class="mt-1 text-sm text-slate-400">GPA 4.0 / 4.0</p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-slate-300 md:text-right">
+                                    <p>威斯康星州麦迪逊</p>
+                                    <p>2021 年 9 月 - 2025 年 12 月</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
 
-            <!-- Experience Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-briefcase me-2"></i>工作经历
-                </h2>
+                    <section class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+                        <div class="space-y-6">
+                            <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                                <h2 class="text-3xl font-semibold text-white">工作经历</h2>
+                                <p class="text-sm text-slate-300">
+                                    从课堂助教到 AI 产品与系统研究的多元实践。
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                CS 571 课程导师
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                威斯康星大学麦迪逊分校 · 计算机科学系
+                                            </p>
+                                            <p class="text-sm text-slate-400">美国威斯康星州麦迪逊</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            2025 年 9 月 - 至今
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                面向 300+ 名学生开设每周辅导时段，指导编程作业调试、架构取舍与项目验收重点。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                与授课团队每周复盘常见疑问，更新 FAQ、讲义与项目说明，让课堂与实作无缝衔接。
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                全栈开发工程师
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                UW-Madison CDIS 夏季 AI 实验室
+                                            </p>
+                                            <p class="text-sm text-slate-400">美国威斯康星州麦迪逊</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            2025 年 6 月 - 2025 年 8 月
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                设计并上线聊天式旅行规划工具，结合 OpenAI 意图解析与实时航班、酒店、景点 API 提供可信方案。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                将 SerpAPI、Amadeus、Google Maps 数据标准化为可复用的预订卡片，并在界面中标注数据来源。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                主导上线与 CI/CD 自动化，引入 Prettier、ESLint、Devcontainer 与 pre-commit，统一团队协作体验。
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                操作系统研究实习生
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                远程
+                                            </p>
+                                            <p class="text-sm text-slate-400">美国加利福尼亚州默塞德</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            2024 年 4 月 - 2025 年 2 月
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                使用 C++ 打造多节点性能调优工具，为研究团队提供可操作的分析面板。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                修改 Linux 内核路径，模拟分层内存架构并在多节点环境中验证假设。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                            落地 Perf 与 VTune 流程，记录调优手册并定位每轮回归的瓶颈。
+                                        </span>
+                                    </li>
+                                </ul>
+                            </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                研究助理
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                香港科技大学
+                                            </p>
+                                            <p class="text-sm text-slate-400">香港清水湾</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            2024 年 10 月 - 2025 年 2 月
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                分析北美短视频平台的增长趋势与用户黏性。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                研究推荐算法背后的内容策略，为团队提供洞察。
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article
+                                    class="rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                    <div
+                                        class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-white">
+                                                系统与软件实习生
+                                            </h3>
+                                            <p class="text-sm text-slate-300">
+                                                艾默生过程管理有限公司
+                                            </p>
+                                            <p class="text-sm text-slate-400">中国上海</p>
+                                        </div>
+                                        <p class="text-sm text-slate-400">
+                                            2024 年 6 月 - 2024 年 7 月
+                                        </p>
+                                    </div>
+                                    <ul class="mt-4 space-y-3 text-slate-200">
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                协助工程师绘制与优化流程图，完善技术资料。
+                                            </span>
+                                        </li>
+                                        <li class="flex gap-3">
+                                            <span
+                                                class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                            <span>
+                                                通过轻量化工具改进文档流与日常排班效率。
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                                <h2 class="text-3xl font-semibold text-white">技术栈</h2>
+                                <p class="text-sm text-slate-300">
+                                    驱动快速迭代的语言、工具与框架。
+                                </p>
+                            </div>
+                            <div class="space-y-5">
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        编程语言
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        <strong class="text-white">C · C++</strong>、Python、
+                                        JavaScript、Java、HTML、CSS
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        工具与平台
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        Git、GitHub Actions、
+                                        <strong class="text-white">Docker</strong>、Vim、
+                                        <strong class="text-white">CMake · GDB</strong>、vcpkg、
+                                        Figma、Google Test、UML、JUnit
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        分布式与数据
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        PostgreSQL、Cassandra、
+                                        <strong class="text-white">HDFS · Spark · Kafka</strong>
+                                    </p>
+                                </div>
+                                <div
+                                    class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-2xl shadow-black/20">
+                                    <h3 class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                                        框架与库
+                                    </h3>
+                                    <p class="mt-3 text-sm text-slate-200">
+                                        React、React Native、
+                                        <strong class="text-white">gRPC</strong>、Flask、OpenMP、
+                                        PyTorch、pandas、NumPy、Matplotlib
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                <!-- Experience 1 -->
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h4>操作系统研究实习生</h4>
-                        <p class="mb-1">加利福尼亚大学默塞德分校</p>
-                        <ul>
-                            <li>
-                                使用 C++ 编写多节点系统的<em>性能调优工具</em>
+                    <section class="space-y-6">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                            <h2 class="text-3xl font-semibold text-white">重点项目</h2>
+                            <p class="text-sm text-slate-300">
+                                系统思维与体验设计在这些实验中交织。
+                            </p>
+                        </div>
+                        <div class="space-y-6">
+                            <article
+                                class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white">
+                                            非线性聊天机器人
+                                        </h3>
+                                        <p class="mt-2 text-sm text-slate-300">
+                                            React · Node.js · TypeScript · PostgreSQL · Prisma
+                                        </p>
+                                    </div>
+                                    <p class="text-sm text-slate-400 sm:text-right">2025 年 8 月</p>
+                                </div>
+                                <ul class="space-y-3 text-slate-200">
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            使用 ReactFlow + Dagre 构建树状对话可视化，让用户可以分支、回溯并直观浏览复杂话题。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            结合 Wasp、PostgreSQL 与 REST API，处理认证、数据持久化与实时串流回复。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            通过 JWT 认证、限流、多层校验与 XSS 防护加固安全。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            借助 Docker 与 GitHub Actions 自动化部署与 CI/CD。
+                                        </span>
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://chat.hongzhengli.com"
+                                    class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-50 transition hover:bg-primary/25">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>在线体验</span>
+                                </a>
+                            </article>
+                            <article
+                                class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white">
+                                            BusTub 数据库缓冲池管理器
+                                        </h3>
+                                        <p class="mt-2 text-sm text-slate-300">C++ · CMake · Ninja · Git</p>
+                                    </div>
+                                    <p class="text-sm text-slate-400 sm:text-right">2025 年 5 月</p>
+                                </div>
+                                <ul class="space-y-3 text-slate-200">
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            在 3 万行以上的 C++17 代码库中实现缓冲池管理器与 B+Tree 索引等核心基础设施。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            构建线程安全内存管理、LRU-K 淘汰与并发索引策略，确保高负载下仍保持响应。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            引入 RAII、页守卫与 latch crabbing 等并发控制，保证多线程行为可预测。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            优化锁自由队列与异步磁盘 I/O，在 1 ms 磁盘延迟下达到 8300 QPS（scan）/ 5700 QPS（get）。
+                                        </span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <article
+                                class="flex flex-col gap-5 rounded-3xl border border-white/10 bg-slate-900/65 p-6 shadow-2xl shadow-black/30 transition hover:border-white/20">
+                                <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white">
+                                            GOPHER 物流模拟系统
+                                        </h3>
+                                        <p class="mt-2 text-sm text-slate-300">
+                                            C++ · TypeScript · Docker · Git
+                                        </p>
+                                    </div>
+                                    <p class="text-sm text-slate-400 sm:text-right">2024 年 5 月</p>
+                                </div>
+                                <ul class="space-y-3 text-slate-200">
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            使用 C++ 构建多实体模拟器，结合装饰器与观察者模式，将实时状态推送到 TypeScript 仪表盘。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            借助 Doxygen 维护文档，并用 Google Test 覆盖关键逻辑路径。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            通过 Docker 容器化环境，结合 CI/CD 管线自动化测试与部署。
+                                        </span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span
+                                            class="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-primary/70"></span>
+                                        <span>
+                                            遵循 Scrum 节奏并使用 Git 协作，保持团队按时交付。
+                                        </span>
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://drone.hongzhengli.com"
+                                    class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-50 transition hover:bg-primary/25">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>在线体验</span>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="space-y-6">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-end">
+                            <h2 class="text-3xl font-semibold text-white">荣誉与奖项</h2>
+                            <p class="text-sm text-slate-300">
+                                旅程中的里程碑与认可。
+                            </p>
+                        </div>
+                        <ul
+                            class="grid gap-3 rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-2xl shadow-black/20 sm:grid-cols-2">
+                            <li class="text-sm text-slate-100">
+                                <strong class="text-white">院长名单</strong>，UW-Madison 文理学院 ·
+                                2024 年秋季
                             </li>
-                            <li>
-                                调整 Linux
-                                内核代码，在多节点环境中模拟分层内存架构
+                            <li class="text-sm text-slate-100">
+                                <strong class="text-white">院长名单</strong>，明尼苏达大学科学与工程学院 ·
+                                2023 年秋季 & 2024 年春季
                             </li>
-                            <li>
-                                借助 <em>Perf</em> 与 <em>VTune</em> 等 Linux
-                                性能工具持续监测并分析指标
+                            <li class="text-sm text-slate-100">
+                                Tau Sigma 全国荣誉学会 · 明尼苏达大学分会终身会员
+                            </li>
+                            <li class="text-sm text-slate-100">
+                                学术卓越奖，加州大学戴维斯分校全球学习项目 · 2023-2024
                             </li>
                         </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>远程</p>
-                        <p>2024年4月 - 2025年2月</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
+            </main>
 
-                <!-- Experience 2 -->
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h4>研究助理</h4>
-                        <p class="mb-1">香港科技大学</p>
-                        <ul>
-                            <li>研究北美短视频平台的用户趋势与互动行为</li>
-                            <li>梳理内容运营策略及算法推荐的影响</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>香港清水湾</p>
-                        <p>2024年10月 - 2025年2月</p>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>系统与软件实习生</h4>
-                        <p class="mb-1">艾默生过程管理有限公司</p>
-                        <ul>
-                            <li>协助工程师整理、修订并绘制工程图纸</li>
-                            <li>配合团队梳理文档归档流程并优化日常排班</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>中国上海</p>
-                        <p>2024年6月 - 2024年7月</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Featured Projects Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4">
-                    <i class="fas fa-code-branch me-2"></i>精选项目
-                </h2>
-
-                <!-- Project 1 -->
-                <div class="row mb-4">
-                    <div class="col-md-8">
-                        <h4>GOPHER配送仿真系统</h4>
-                        <p class="mb-1">
-                            <strong>技术栈：</strong> C++, TypeScript, Docker,
-                            Git
-                        </p>
-                        <ul>
-                            <li>
-                                以 C++ 实现
-                                <em>Composite Factory</em
-                                >（组合工厂）架构，支持不同实体协同仿真
-                            </li>
-                            <li>
-                                通过
-                                <em>Decorator</em>（装饰器）模式按需扩展实体能力
-                            </li>
-                            <li>
-                                落地 <em>Observer</em>（观察者）机制，实时向
-                                TypeScript 前端推送 JSON 事件
-                            </li>
-                            <li>使用 Docker 统一开发、测试与部署环境</li>
-                        </ul>
+            <footer
+                class="border-t border-white/10 bg-slate-950/80 py-10 text-center text-sm text-slate-300">
+                <div class="mx-auto flex max-w-4xl flex-col gap-4 px-6">
+                    <p>感谢驻足，让我们一起打造有意义的成果。</p>
+                    <p>
+                        如有合作或问题，欢迎发送邮件至
                         <a
-                            href="https://drone.hongzhengli.com"
-                            class="btn btn-outline-primary btn-sm me-2"
-                            >查看演示</a
-                        >
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>2024年2月 - 2024年5月</p>
-                    </div>
+                            href="mailto:hongzheng@cs.wisc.edu"
+                            class="font-semibold text-primary-100 underline decoration-dotted underline-offset-4">
+                            hongzheng@cs.wisc.edu
+                        </a>
+                        。
+                    </p>
                 </div>
+            </footer>
+        </div>
 
-                <!-- Project 2 -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>BusTub DBMS Buffer Pool Manager</h4>
-                        <p class="mb-1"><strong>技术栈：</strong> C++, Git</p>
-                        <ul>
-                            <li>
-                                实现<em>线程安全</em>的 Buffer Pool
-                                Manager，高效协调内存与磁盘
-                            </li>
-                            <li>使用 <em>LRU-K</em> 算法改进页面淘汰策略</li>
-                            <li>
-                                设计磁盘调度器，支持
-                                <em>异步 I/O</em> 提升读写效率
-                            </li>
-                            <li>引入精细化锁与同步机制，兼顾并发与吞吐</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <p>2024年12月</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Honors Section -->
-            <div class="project mb-5">
-                <h2 class="mb-4"><i class="fas fa-award me-2"></i>荣誉奖项</h2>
-                <ul>
-                    <li>
-                        2024年秋季｜威斯康星大学麦迪逊分校文理学院院长荣誉榜
-                    </li>
-                    <li>
-                        2023年秋季、2024年春季｜明尼苏达大学理工学院院长荣誉榜
-                    </li>
-                    <li>
-                        Tau Sigma National Honor Society
-                        明尼苏达大学分会终身会员
-                    </li>
-                    <li>2023-2024｜加州大学戴维斯分校全球学习项目学术卓越奖</li>
-                </ul>
-            </div>
-        </section>
-
-        <footer class="bg-light text-dark py-3 position-sticky mt-auto">
-            <p class="text-center">
-                感谢您访问我的网站。<br />
-                如有任何问题或建议，请随时<a
-                    href="mailto:hongzheng@cs.wisc.edu"
-                    class="text-decoration-none text-primary fw-bold"
-                    >联系我</a
-                >。
-            </p>
-        </footer>
-
-        <!-- WeChat QR Code Modal -->
         <div
-            class="modal fade"
-            id="wechatModal"
-            tabindex="-1"
-            aria-labelledby="wechatModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="wechatModalLabel">
-                            <i class="fab fa-weixin me-2"></i>微信二维码
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img
-                            src="../assets/images/wechat_qr_code.JPG"
-                            alt="WeChat QR Code"
-                            class="img-fluid rounded shadow"
-                            style="max-width: 300px" />
-                        <p class="mt-3 text-muted">扫描添加我的微信</p>
-                        <p class="fw-bold">微信号: HJKL4WASD</p>
-                    </div>
-                </div>
+            id="wechat-modal"
+            data-modal
+            class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/80 px-6 backdrop-blur"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true">
+            <div
+                class="relative w-full max-w-sm rounded-3xl border border-white/10 bg-slate-900/90 p-6 shadow-2xl shadow-primary/20">
+                <button
+                    type="button"
+                    class="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-slate-300 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                    data-modal-close="wechat-modal"
+                    aria-label="关闭窗口">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <h3 class="mb-4 text-lg font-semibold text-white">
+                    <i class="fa-brands fa-weixin text-emerald-300"></i>
+                    <span class="ml-2 align-middle">微信二维码</span>
+                </h3>
+                <img
+                    src="../assets/images/wechat_qr_code.JPG"
+                    alt="微信二维码"
+                    class="w-full rounded-2xl border border-white/10 object-cover"
+                    data-modal-focus />
+                <p class="mt-4 text-center text-sm text-slate-300">欢迎扫码添加微信</p>
+                <p class="text-center text-sm font-semibold text-white">
+                    WeChat ID: HJKL4WASD
+                </p>
             </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="../js/language-switcher.js"></script>
+        <script src="../menu.js"></script>
+        <script src="../js/ui.js"></script>
+        <script src="../backToTop.js"></script>
         <script
             type="text/javascript"
             id="clustrmaps"
             src="//clustrmaps.com/map_v2.js?d=W6a7uV84kzU_AHR0tXCbbUt6VRGfPUPQ0pzEQBeRKwg&cl=000000&w=0&t=n&co=e9ecef&cmo=f58025"></script>
-        <!-- Menu Script -->
-        <script>
-            // Modified generateMenu function for Chinese version
-            function generateMenu() {
-                fetch("menus.json")
-                    .then((response) => response.json())
-                    .then((data) => {
-                        const menuContainer =
-                            document.getElementById("dynamic-menu");
-                        data.menuItems.forEach((item) => {
-                            const li = document.createElement("li");
-                            li.className = "nav-item";
-
-                            if (item.type === "dropdown") {
-                                li.classList.add("dropdown");
-                                const a = document.createElement("a");
-                                a.className = "nav-link dropdown-toggle";
-                                a.href = "#";
-                                a.id = "navbarDropdown";
-                                a.role = "button";
-                                a.setAttribute("data-bs-toggle", "dropdown");
-                                a.setAttribute("aria-expanded", "false");
-                                a.textContent = item.text;
-
-                                const ul = document.createElement("ul");
-                                ul.className = "dropdown-menu";
-                                ul.setAttribute(
-                                    "aria-labelledby",
-                                    "navbarDropdown",
-                                );
-
-                                item.items.forEach((subItem) => {
-                                    const subLi = document.createElement("li");
-                                    const subA = document.createElement("a");
-                                    subA.className = "dropdown-item";
-                                    subA.href = subItem.href;
-                                    subA.textContent = subItem.text;
-                                    subLi.appendChild(subA);
-                                    ul.appendChild(subLi);
-                                });
-
-                                li.appendChild(a);
-                                li.appendChild(ul);
-                            } else if (item.type === "link") {
-                                const a = document.createElement("a");
-                                a.className = "nav-link";
-                                a.href = item.href;
-                                a.textContent = item.text;
-                                li.appendChild(a);
-                            }
-
-                            menuContainer.appendChild(li);
-                        });
-
-                        // Add language switcher
-                        const languageSwitcher = document.createElement("li");
-                        languageSwitcher.className = "nav-item";
-
-                        const switcherLink = document.createElement("a");
-                        switcherLink.className = "nav-link";
-                        switcherLink.href = "../index.html";
-                        switcherLink.textContent = "English";
-                        switcherLink.addEventListener("click", function () {
-                            try {
-                                localStorage.setItem("preferredLanguage", "en");
-                            } catch (e) {
-                                // Silently fail if localStorage unavailable
-                            }
-                        });
-
-                        languageSwitcher.appendChild(switcherLink);
-                        menuContainer.appendChild(languageSwitcher);
-                    });
-            }
-
-            // Initialize menu
-            generateMenu();
-        </script>
-        <script src="../backToTop.js"></script>
     </body>
 </html>
