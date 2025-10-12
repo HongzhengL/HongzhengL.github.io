@@ -23,8 +23,8 @@
             "text": "演示",
             "items": [
                 {
-                    "text": "非线性 LLM 聊天机器人",
-                    "href": "https://chat.hongzhengli.com"
+                    "text": "非线性聊天机器人",
+                    "href": "https://nonlinearchatbot.netlify.app"
                 },
                 {
                     "text": "无人机仿真",
