@@ -31,6 +31,23 @@
             ]
         },
         {
+            "course_code": "COMP SCI 502",
+            "image": "./assets/images/bucky.png",
+            "semester": "Fall 2025",
+            "review": [
+                "This is a required course if you want to be a Peer Mentor. The ironic part is that while you get paid $17 a week to take it, you still have to pay tuition for the actual course credit..."
+            ]
+        },
+        {
+            "course_code": "MUSIC 113",
+            "image": "./assets/images/bucky.png",
+            "semester": "Fall 2025",
+            "instructor": "Javier Calderon",
+            "review": [
+                "Even though it's famously a 'clap-for-credit' course, your experience will still vary depending on the professor. I took it with Javier, and he definitely has the fewest requirements. All we had to do was take a quick quiz. From what I've heard, other instructors make you write short responses or even record a video of the performance to prove you were actually there."
+            ]
+        },
+        {
             "course_code": "COMP SCI 537",
             "image": "assets/images/comp_sci_537.png",
             "semester": "Spring 2025",
