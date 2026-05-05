@@ -5,8 +5,12 @@
         if (helpers.getCurrentLanguage) {
             return helpers.getCurrentLanguage();
         }
+        const langAttr = document.documentElement.lang || "";
+        if (langAttr.toLowerCase().startsWith("zh")) {
+            return "zh";
+        }
         const path = window.location.pathname;
-        return path.startsWith("/zh/") || path === "/zh" ? "zh" : "en";
+        return /(^|\/)zh(\/|$)/.test(path) ? "zh" : "en";
     }
 
     function getOppositeLanguageUrl(currentPath) {
@@ -17,28 +21,22 @@
         const isChinese = getCurrentLanguage() === "zh";
 
         if (!isChinese) {
-            if (path === "/" || path.endsWith("/index.html")) {
-                return "/zh/index.html";
-            }
             if (path.endsWith("/course-review.html")) {
-                return "/zh/course-review.html";
+                return "zh/course-review.html";
             }
             if (path.endsWith("/my-work.html")) {
-                return "/zh/my-work.html";
+                return "zh/my-work.html";
             }
-            return "/zh/index.html";
+            return "zh/index.html";
         }
 
-        if (path === "/zh" || path.endsWith("/zh/") || path.endsWith("/zh/index.html")) {
-            return "/index.html";
+        if (path.endsWith("/course-review.html")) {
+            return "../course-review.html";
         }
-        if (path.endsWith("/zh/course-review.html")) {
-            return "/course-review.html";
+        if (path.endsWith("/my-work.html")) {
+            return "../my-work.html";
         }
-        if (path.endsWith("/zh/my-work.html")) {
-            return "/my-work.html";
-        }
-        return "/index.html";
+        return "../index.html";
     }
 
     function setLanguagePreference(language) {
