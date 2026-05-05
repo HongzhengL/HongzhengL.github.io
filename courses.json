@@ -1,11 +1,34 @@
 {
     "courses": [
         {
-            "course_code": "CMU 15-445",
-            "image": "assets/images/bustub.svg",
-            "semester": "Summer 2025",
-            "hours": "N/A",
-            "review": ["I'm still taking it..."]
+            "course_code": "COMP SCI 564",
+            "image": "./assets/images/bucky.png",
+            "semester": "Fall 2025",
+            "instructor": "AnHai Doan",
+            "review": [
+                "If you ask me what I'll remember from this course 30 years from now, it's definitely not going to be anything related to databases. Prof. Doan is a fun guy and tells a lot of jokes and advice during lectures, but somehow it felt like hardly anyone showed up to class (including me, lol).",
+                "Content-wise, the material feels pretty outdated. I mean, it's insane to spend time on ER diagrams in a **systems** course in 2025. If you actually want to learn something, go check out CMU 15-445. It's open-source, and you even get access to Gradescope as a non-CMU student. But if life is kicking your ass right now and you just want 4 easy credits, definitely take it with Prof. Doan (just be aware it might not be this easy with other professors!)."
+            ]
+        },
+        {
+            "course_code": "COMP SCI 577",
+            "image": "./assets/images/bucky.png",
+            "semester": "Fall 2025",
+            "instructor": "Marc Renault",
+            "review": [
+                "I hate this course!",
+                "If you take this with Marc, your final grade will heavily depend on extra credit. There are multiple ways to earn it, so be strategic and do the math! For example, lecture attendance gives you a max of 5 points, and so does the study group. However, a study group only takes 1 hour a week (and can be quite flexible), while lectures take 3 hours. (Disclaimer: I'm not telling you to skip lectures, just giving an example!)"
+            ]
+        },
+        {
+            "course_code": "COMP SCI 620",
+            "image": "./assets/images/bucky.png",
+            "semester": "Fall 2025",
+            "instructor": "Amber Field",
+            "review": [
+                "I would say this could be a lifesaver for people who don't have any internship experience. It will give you tons of material for behavioral interviews. One thing to note is that, your experience in this course is highly dependent on what project you've been assigned to and your teammates. So, do your research and research it well during the first week when you're ranking your preferences of the projects. One trick to boost your chances of getting your top pick is to find a few teammates who have the **exact** same project preferences (Yes, exact!). Just be careful who you team up with. It would be really, really painful if your teammates aren't as enthusiastic as you are! But please don't get me wrong, even if you don't get your top choice, or you end up with shitty teammates, you can still get plenty of great experience to talk about in your interviews as long as you take initiative. Also, if you're into AI, there are tons of ML-related projects to choose from.",
+                "Here are the [project options](./assets/pdf/CS620.pdf) that were offered when I took this course."
+            ]
         },
         {
             "course_code": "COMP SCI 537",
