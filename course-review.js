@@ -203,13 +203,15 @@ function createCourseTable(courses) {
     tableSection.appendChild(selectorWrapper);
 
     const tableOuter = document.createElement("div");
-    tableOuter.className = "mt-4 overflow-hidden rounded-2xl border border-white/5";
+    tableOuter.className =
+        "mt-4 overflow-hidden rounded-2xl border border-white/5";
     const table = document.createElement("table");
     table.className =
         "w-full border-separate border-spacing-y-2 text-left text-sm text-slate-200";
 
     const thead = document.createElement("thead");
-    thead.className = "bg-white/5 text-xs uppercase tracking-widest text-slate-400";
+    thead.className =
+        "bg-white/5 text-xs uppercase tracking-widest text-slate-400";
     const headerRow = document.createElement("tr");
 
     ["Course", "Semester"].forEach((headerText) => {
@@ -283,7 +285,10 @@ function createCourseTable(courses) {
                 : Math.ceil(totalCourses / entriesPerPage);
         const safePage = Math.min(Math.max(requestedPage, 1), totalPages);
 
-        const start = entriesPerPage >= totalCourses ? 0 : (safePage - 1) * entriesPerPage;
+        const start =
+            entriesPerPage >= totalCourses
+                ? 0
+                : (safePage - 1) * entriesPerPage;
         const end =
             entriesPerPage >= totalCourses
                 ? totalCourses
@@ -295,8 +300,8 @@ function createCourseTable(courses) {
                     ? `显示全部 ${totalCourses} 条记录`
                     : `Showing all ${totalCourses} entries`
                 : isChinese
-                    ? `当前显示第 ${start + 1} 至 ${end} 条，共 ${totalCourses} 条`
-                    : `Showing ${start + 1} to ${end} of ${totalCourses} entries`;
+                  ? `当前显示第 ${start + 1} 至 ${end} 条，共 ${totalCourses} 条`
+                  : `Showing ${start + 1} to ${end} of ${totalCourses} entries`;
 
         for (let i = start; i < end; i += 1) {
             const course = courses[i];

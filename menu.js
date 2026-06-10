@@ -205,7 +205,9 @@
             .then((response) => response.json())
             .then((data) => {
                 const desktopMenu = document.getElementById("dynamic-menu");
-                const mobileMenu = document.getElementById("dynamic-menu-mobile");
+                const mobileMenu = document.getElementById(
+                    "dynamic-menu-mobile",
+                );
 
                 populateMenuItems(data.menuItems, desktopMenu, false);
                 populateMenuItems(data.menuItems, mobileMenu, true);
@@ -215,7 +217,9 @@
                 );
                 if (
                     desktopResume &&
-                    !document.querySelector('[data-language-switcher="desktop"]')
+                    !document.querySelector(
+                        '[data-language-switcher="desktop"]',
+                    )
                 ) {
                     const desktopSwitcher = createLanguageSwitcherAction(false);
                     desktopResume.insertAdjacentElement(
